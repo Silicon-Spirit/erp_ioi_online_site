@@ -1,0 +1,117 @@
+{% extends "templates/web.html" %}
+<!DOCTYPE html>
+<html class="no-js preload" style="">
+
+{% block head %}
+
+{{frappe.get_doc("Web Template","Head",fields=["template"]).template}}
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<!-- Metas -->
+<title>Silicon ioi n'est pas qu'un programme</title>
+
+<meta name="description" content="Intégrez la communauté des utilisateurs ioi et profitez de notre documentation" />
+<meta name="keywords" content="" />
+
+<meta property="og:site_name" content="Silicon Brain" />
+<meta property="og:title" content="Silicon ioi n'est pas qu'un programme" />
+<meta property="og:description" content="Intégrez la communauté des utilisateurs ioi et profitez de notre documentation" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost" />
+<meta property="og:image" content="/files/og-share-img.jpg" />
+<meta property="og:image:width" content="1600" />
+<meta property="og:image:height" content="630" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="Silicon Brain" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:title" content="Silicon ioi n'est pas qu'un programme" />
+<meta name="twitter:description" content="Intégrez la communauté des utilisateurs ioi et profitez de notre documentation" />
+<meta name="twitter:image" content="/files/og-share-img.jpg" />
+
+<!-- Viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Icons -->
+<link rel="manifest" href="/files/site.webmanifest" />
+<link rel="shortcut icon" href="/files/favicon.ico" />
+
+<link rel="mask-icon" href="/files/safari-pinned-tab.svg" color="#5a14e6" />
+<link rel="icon" type="image/png" href="/files/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/files/favicon-16x16.png" sizes="16x16" />
+<link rel="apple-touch-icon" sizes="180x180" href="/files/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="192x192" href="/files/apple-touch-icon_192.png" />
+
+<!-- Web App -->
+<meta name="theme-color" content="#5a14e6" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="Silicon ioi" />
+<meta name="apple-mobile-web-app-status-bar-style" content="translucent" />
+
+<!-- Windows Tiles -->
+<meta name="apple-mobile-web-app-title" content="Silicon ioi" />
+<meta name="msapplication-config" content="/files/browserconfig.xml" />
+<meta name="msapplication-TileColor" content="#5a14e6" />
+<meta name="msapplication-square70x70logo" content="/files/win/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="/files/win/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="/files/win/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="/files/win/mstile-310x310.png" />
+
+<script>
+  (function () {
+    var c = document.documentElement.classList,
+      ua = navigator.userAgent;
+    c.remove("no-js");
+    c.toggle("ie", ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1);
+  })();
+</script>
+<script>
+  (function () {
+    document.documentElement.style.setProperty(
+      "--rawVph",
+      window.innerHeight
+    );
+  })();
+</script>
+<script type="module" crossorigin src="/files/app.8687006f.js"></script>
+<link rel="stylesheet" href="/files/app.54b7b081.css" />
+{%endblock%}
+
+
+{% block page_content %}
+
+<body data-v="about">
+    {% set test = frappe.get_doc("Web Template","Header ioi fr",fields=["template"]).template %}
+    
+    {% set args = {"current_page" : 8, "relative_page_link" : "universe", "home" : 0} %}
+    
+    {{frappe.render_template(test,args)}}
+  
+  
+    <div class="router">
+        <div class="view view--about">
+  
+            {{frappe.get_doc("Web Template","Universe FR",fields=["template"]).template}}
+  
+  
+  
+            {{frappe.get_doc("Web Template","Footer ioi fr",fields=["template"]).template}}
+  </div>
+  </div>
+
+  <div id="grid-ctn" class="ctn">
+    <div id="grid" class="row | pr">
+      <div class="gridSizer | colSizer | col-1 | t-col-1 | m-col-1"></div>
+      <div class="gridSizer | gutSizer"></div>
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.polyfill.io/v3/polyfill.min.js?features=default,es6,fetch,Object.entries,Object.values,IntersectionObserver,Array.from&flags=gated"></script>
+</body>
+{%endblock%}
+
+</html>

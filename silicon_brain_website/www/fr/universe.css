@@ -1,0 +1,288 @@
+.navbar {
+  display: none;
+}
+
+/* head page */
+
+body {
+  background-color: #311095;
+  overflow-x: hidden;
+}
+
+.text_reseau {
+  color: #fff;
+}
+
+.navbar-light {
+  border: none;
+}
+
+.head_page {
+  padding-top: 100px;
+}
+
+.h1_text {
+  text-align: center;
+}
+
+.all_logo {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logo_reseau {
+  max-width: 100px;
+}
+
+.text_reseau {
+  cursor: pointer;
+}
+
+.reseau_group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* mid page */
+
+.LinkDwnl{
+    overflow: auto;
+    max-height: 17rem;
+}
+
+
+.mid_page {
+  background-color: #5111d0;
+  border-bottom: solid 25px #311095;
+}
+
+.title_mid {
+  display: flex;
+
+  justify-content: space-evenly;
+}
+
+.img_forum,
+.img_wiki {
+  max-width: 400px;
+  cursor: pointer;
+}
+
+.mid_group_img {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mid_text_group {
+  display: flex;
+  justify-content: space-around;
+}
+
+.join {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/* bottom page */
+
+.docsIntro__S {
+  right: calc(var(--m) + min(10.688vw, -14.956rem)) !important;
+  position: absolute !important;
+  z-index: -1 !important;
+  bottom: clamp(20rem, 74.958vw, 128.373rem) !important;
+  width: clamp(20rem, 13.854vw, 23.774rem) !important;
+  transform: rotate(20deg) !important;
+}
+
+.all_categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.txtPl {
+  width: 50%;
+  margin-bottom: 15px;
+}
+
+.download_btn {
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+
+.title_categories {
+  display: flex;
+  justify-content: center;
+}
+
+.categories_card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.DwVw {
+  width: 20px;
+}
+
+.download_icon {
+  width: 20px;
+}
+
+.InCat {
+  margin: 15px;
+  padding: 10px;
+  background-color: #fff;
+  height: 250px;
+  width: 400px;
+  border-radius: 15px;
+}
+
+.youtube_categories {
+}
+
+.doc_categories {
+  height: auto !important;
+}
+
+/*footer*/
+
+.info__title,
+.footer__navTitle,
+.footer__copyright {
+  color: black;
+}
+
+/*mobile*/
+
+@media only screen and (min-width: 1734px) {
+  .tools_categories {
+    margin-top: 15px !important;
+  }
+}
+
+@media only screen and (max-width: 875px) {
+  .tools_categories {
+    margin-top: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .InCat {
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .InCat {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 743px) {
+  .all_categories {
+    display: grid;
+    justify-content: center;
+  }
+}
+
+.heroSlide__asset {
+  max-width: none !important;
+  max-height: none !important;
+}
+
+@media only screen and (max-width: 743px) {
+  .nlForm__submit .btn__label {
+    display: block !important;
+  }
+  .appCardDetailed__line {
+    background-color: white;
+  }
+}
+
+.nlForm__submitIcon {
+  flex-shrink: inherit;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.docsIntro__grid {
+  display: flex;
+  row-gap: var(--gut);
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.img_forum,
+.img_wiki {
+  max-width: 200px;
+}
+
+.logo_reseau {
+  max-width: 70px;
+}
+
+@media only screen and (max-width: 470px) {
+  .logo_reseau {
+    max-width: 50px;
+  }
+
+  .img_forum,
+  .img_wiki {
+    max-width: 150px;
+  }
+}
+
+@media only screen and (min-width: 2160px) {
+  .document_categories {
+    margin-left: 150px;
+  }
+
+  .doc_categories {
+  }
+
+  .youtube_categories {
+    margin-left: 150px;
+  }
+
+  .tools_categories {
+    margin-left: 150px;
+  }
+}
+
+@media only screen and (min-width: 743px) {
+  .all_logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .reseau_group {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .mid_group_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #img-join {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .mid_text_group {
+    display: flex;
+    justify-content: center;
+  }
+
+  #txt-join {
+    margin-left: 100px;
+    margin-right: 90px;
+  }
+}

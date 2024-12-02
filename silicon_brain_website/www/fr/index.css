@@ -1,0 +1,76 @@
+.PackBtn{
+    position: absolute !important;
+    top: 5rem !important;
+    right: 43rem !important;
+    font-weight: 500 !important;
+    pointer-events: all !important;
+    transition: visibility 0s,opacity .5s .3s !important;
+}
+@media only screen and (min-width: 744px){
+.PackBtn{
+    transform: translate3d(0,calc((var(--navH) - var(--navH-sticky)) * -.5 * var(--navOffset, 0px)),0) !important;
+}
+}
+
+
+
+.header__loginBtn{
+    position: absolute !important;
+    top: 5rem !important;
+    right: 30rem !important;
+    font-weight: 500 !important;
+    pointer-events: all !important;
+    transition: visibility 0s,opacity .5s .3s !important;
+}
+@media only screen and (min-width: 744px){
+.header__loginBtn{
+    transform: translate3d(0,calc((var(--navH) - var(--navH-sticky)) * -.5 * var(--navOffset, 0px)),0) !important;
+}
+}
+
+
+.heroSlide__asset{
+    max-width:none !important;
+    max-height:none !important;
+}
+
+@media only screen and (max-width: 743px){
+.nlForm__submit .btn__label {
+    display: block !important;
+}
+.appCardDetailed__line {
+    background-color: white;
+}
+}
+
+.nlForm__submitIcon {
+    flex-shrink: inherit;
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.tile__asset{ opacity:1; }
+
+.tile__fig {
+    background-color: transparent;}
+
+.tile {
+color:#000000;
+}
+
+.tile__asset{
+	margin-left: auto;
+	margin-right: auto;
+	width:auto;
+	position:relative;
+}
+
+.tile__desc{
+margin-top:10px;
+}
+
+@media only screen and (max-width: 743px){
+.tile__desc {
+    font-size: initial;
+}
+}
