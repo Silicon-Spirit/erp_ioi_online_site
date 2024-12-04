@@ -48,7 +48,7 @@
 <link rel="icon" type="image/png" href="/files/favicon-16x16.png" sizes="16x16">
 <link rel="apple-touch-icon" sizes="180x180" href="/files/apple-touch-icon.png">
 <link rel="apple-touch-icon" sizes="192x192" href="/files/apple-touch-icon_192.png">
-<link rel="stylesheet" href="files/web_page/2024/12/single_vente/css.css">
+<link rel="stylesheet" href="/files/web_template/2024/12/sales_features_fr/css.css">
 
 <!-- Web App -->
 <meta name="theme-color" content="#5a14e6">
@@ -85,12 +85,13 @@
 </script>
 <script type="module" crossorigin src="/files/app.8687006f.js"></script>
 <link rel="stylesheet" href="/files/app.54b7b081.css" />
+<script src="/files/web_template/2024/12/sales_features_fr/app.js"></script>
 {%endblock%}
 {% block page_content %}
 <body>
 {% set test = frappe.db.get_value("Web Template","Header ioi fr","template") %}
 
-  {% set args = {"current_page" : 2, "relative_page_link" : "appointments", "home" : 0} %}
+  {% set args = {"current_page" : 2, "relative_page_link" : "sales-features", "home" : 0} %}
 
   {{frappe.render_template(test,args)}}
 {{frappe.db.get_value("Web Template","sales-features FR","template")}}
