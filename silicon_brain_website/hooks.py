@@ -75,6 +75,9 @@ website_redirects = [
 {"source": "/en/faq", "target": "/en/universe"},
 {"source": "/fr/faq", "target": "/fr/universe"},
 {"source": "/nl/faq", "target": "/nl/universe"},
+{"source": "/en/sales-features", "target": "/en/sales_features"},
+{"source": "/fr/sales-features", "target": "/fr/sales_features"},
+{"source": "/nl/sales-features", "target": "/nl/sales_features"},
 ]
 
 # Generators
