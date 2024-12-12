@@ -7,8 +7,9 @@
 }
 
 .iframe-form{
-   height: 600px;
-    padding: 5px;
+   height: 100%;
+	width: 100%;
+    padding: 25px;
     background-color: white;
 }
 
