@@ -6,6 +6,20 @@
     overflow: hidden;
 }
 
+.iframe-form{
+   height: 600px;
+    padding: 5px;
+    background-color: white;
+}
+
+.web-form-container:first-child{
+	display:none;
+}
+
+.web-form-container:last-child{
+	display:none;
+}
+
 /* FIRST SECTION */
 .container{
     /* background-color: #5914E6; */
