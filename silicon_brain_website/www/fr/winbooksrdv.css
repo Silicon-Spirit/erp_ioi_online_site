@@ -7,10 +7,14 @@
 }
 
 .iframe-form{
-   height: 700px;
+   height: 600px;
 	width: 100%;
     padding: 25px;
     background-color: white;
+}
+
+.web-form-container{
+	margin-top:-50px;
 }
 
 /* FIRST SECTION */
