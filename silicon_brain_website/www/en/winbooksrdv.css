@@ -7,14 +7,14 @@
 }
 
 .iframe-form{
-   height: 100%;
+   height: 600px;
 	width: 100%;
     padding: 25px;
     background-color: white;
 }
 
-.web-form-container:first-child{
-	display:none;
+.web-form-container{
+	margin-top:-50px;
 }
 
 /* FIRST SECTION */
@@ -384,6 +384,9 @@ iframe{
 }
 
 @media (min-width: 1200px){
+	.iframe-form{
+   height: 100%;
+	}
     .landing-lead .calendly{
         display: flex;
         flex-direction: row;
