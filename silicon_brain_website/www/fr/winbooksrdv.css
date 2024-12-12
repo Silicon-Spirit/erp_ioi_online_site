@@ -6,6 +6,13 @@
     overflow: hidden;
 }
 
+.iframe-form{
+   height: 100%;
+	width: 100%;
+    padding: 25px;
+    background-color: white;
+}
+
 /* FIRST SECTION */
 .container{
     /* background-color: #5914E6; */
