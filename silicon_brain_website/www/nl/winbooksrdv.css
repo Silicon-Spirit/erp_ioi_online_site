@@ -6,6 +6,17 @@
     overflow: hidden;
 }
 
+.iframe-form{
+   height: 600px;
+	width: 100%;
+    padding: 25px;
+    background-color: white;
+}
+
+.web-form-container{
+	margin-top:-50px;
+}
+
 /* FIRST SECTION */
 .container{
     /* background-color: #5914E6; */
@@ -373,6 +384,9 @@ iframe{
 }
 
 @media (min-width: 1200px){
+		.iframe-form{
+   height: 100%;
+	}
     .landing-lead .calendly{
         display: flex;
         flex-direction: row;
