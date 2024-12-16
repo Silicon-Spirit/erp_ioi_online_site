@@ -1,7 +1,7 @@
 {% extends "templates/web.html" %}
 
 <!doctype html>
-<html class="no-js preload" style="">
+<html class="no-js preload">
 
 {% block meta_block %}
 <meta name="language" value="nl" />
@@ -9,7 +9,7 @@
 
 {% block head %}
 
-{{frappe.get_doc("Web Template","Head",fields=["template"]).template}}
+{{frappe.db.get_value("Web Template","Head","template")}}
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -87,7 +87,7 @@
 
 
 
-    {% set test = frappe.get_doc("Web Template","Header ioi nl",fields=["template"]).template %}
+    {% set test = frappe.db.get_value("Web Template","Header ioi nl","template") %}
 
     {% set args = {"current_page" : 6, "relative_page_link" : "all_news", "home" : 0} %}
     
@@ -97,11 +97,11 @@
     <div class="router">
         <div class="view view--news">
 
-            {{frappe.get_doc("Web Template","All News NL",fields=["template"]).template}}
+            {{frappe.db.get_value("Web Template","All News NL","template")}}
 
 
 
-            {{frappe.get_doc("Web Template","Footer ioi nl",fields=["template"]).template}}
+            {{frappe.db.get_value("Web Template","Footer ioi nl","template")}}
         </div>
     </div>
 

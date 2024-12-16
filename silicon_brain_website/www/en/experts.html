@@ -1,7 +1,7 @@
 {% extends "templates/web.html" %}
 
 <!doctype html>
-<html class="no-js preload" style="">
+<html class="no-js preload">
 
 {% block meta_block %}
 <meta name="language" value="en" />
@@ -9,7 +9,7 @@
 
 {% block head %}
 
-{{frappe.get_doc("Web Template","Head",fields=["template"]).template}}
+{{frappe.db.get_value("Web Template","Head","template")}}
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -118,7 +118,7 @@ crossorigin=""></script>
 
 <body data-v="experts" id="full_page">
     
-      {% set test = frappe.get_doc("Web Template","Header ioi en",fields=["template"]).template %}
+      {% set test = frappe.db.get_value("Web Template","Header ioi en","template") %}
     
       {% set args = {"current_page" : 5, "relative_page_link" : "experts", "home" : 0} %}
       
@@ -128,13 +128,13 @@ crossorigin=""></script>
       <div class="router">
           <div class="view view--experts">
     
-              {{frappe.get_doc("Web Template","Our Experts EN",fields=["template"]).template}}
+              {{frappe.db.get_value("Web Template","Our Experts EN","template")}}
     
             <div id="bg_opacity" class="bg-opacity" style="display:none"></div>
             <div id="reseller_list" class="grid-center">
             </div>
     
-              {{frappe.get_doc("Web Template","Footer ioi en",fields=["template"]).template}}
+              {{frappe.db.get_value("Web Template","Footer ioi en","template")}}
     </div>
     </div>
 

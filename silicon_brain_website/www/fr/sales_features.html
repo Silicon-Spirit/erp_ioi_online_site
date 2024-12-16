@@ -1,6 +1,6 @@
 {% extends "templates/web.html" %}
 <!doctype html>
-<html class="no-js preload" style="">
+<html class="no-js preload">
 
 {% block meta_block %}
 <meta name="language" value="fr" />
@@ -94,7 +94,7 @@
   {% set args = {"current_page" : 2, "relative_page_link" : "sales-features", "home" : 0} %}
 
   {{frappe.render_template(test,args)}}
-{{frappe.db.get_value("Web Template","sales-features FR","template")}}
+{{frappe.db.get_value("Web Template","sales-features fr","template")}}
     {{frappe.db.get_value("Web Template","Footer ioi fr","template")}}
 </body>
 {% endblock %}
