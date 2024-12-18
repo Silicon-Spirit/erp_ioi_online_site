@@ -67,7 +67,7 @@ function trigger_opacity(){
                 var elementli = document.createElement("li");
 
                 elementli.className="locatorList__listEl | location";
-                elementli.innerHTML = `<div class="resellers-all "><div class="resellers-img pc-only"><div id="resellers_img"><img src="${resellers[i].image}" loading="lazy" onclick="show_nav(this)" data-nav="${resellers[i].nav_id}" class=" referencesSlider__icon | db | fit oc" alt="${resellers[i].full_name}"></div><div style="margin-right:auto; margin-left:auto; padding-top:15px; min-width:50%"><a href="https://erp.sales.ioi.online/?var=${resellers[i].identification.toUpperCase()}#signup" onclick="gtag_report_conversion('https://erp.sales.ioi.online/?var=${resellers[i].identification.toUpperCase()}#signup', 'AW-11139658231/pOHSCIu8o5YYEPfj5r8p' ,11820690)"><button class="btn btn--s" style="top:50%;" type=submit><span class="btn__label">Essai gratuit / Commande</span><span class="btn__bg | fill"></span><svg class="m-only | nlForm__submitIcon | icon icon--arrow" viewBox="0 0 35 32" aria-hidden="true" fill="none" stroke-width="4" stroke="currentColor"><path d="M0 16h32" /><path d="m18 2 14 14-14 14" /></svg></button></a></div></div><div class="resellers-txt"><a onclick="map_focus(this)" data-lon=${resellers[i].longitude}data-lat=${resellers[i].latitude}class="pointer"><h3 class="location__title | title | fw-bold">${resellers[i].full_name}<br></h3><address class="location__address">${resellers[i].address}</address></a><p>${resellers[i].phone}${resellers[i].email?'<br><a href="mailto:' + resellers[i].email + '">' + resellers[i].email + '</a>':""}<br>${resellers[i].website?'<a href="' + resellers[i].website + '" target="_blank" rel="noopener">' + resellers[i].website.replace("https://","") + '</a>':""}</p></div><div class="mb-only"><div style="margin-right:auto; margin-left:auto; padding-top:15px; min-width:50%"><a href="https://erp.sales.ioi.online/?var=${resellers[i].identification.toUpperCase()}#signup" onclick="gtag_report_conversion('https://erp.sales.ioi.online/?var=${resellers[i].identification.toUpperCase()}#signup', 'AW-11139658231/pOHSCIu8o5YYEPfj5r8p' ,11820690)" `+'><button class="btn btn--s" style="top:50%;" type=submit><span class="btn__label">Essai gratuit / Commande</span><span class="btn__bg | fill"></span><svg class="m-only | nlForm__submitIcon | icon icon--arrow" ``viewBox="0 0 35 32" aria-hidden="true" fill="none" stroke-width="4" stroke="currentColor"><path d="M0 16h32" /><path d="m18 2 14 14-14 14" /></svg></button></a></div></div></div>';
+                elementli.innerHTML = `<div class="resellers-all "><div class="resellers-img pc-only"><div id="resellers_img"><img src="${resellers[i].image}" loading="lazy" onclick="show_nav(this)" data-nav="${resellers[i].nav_id}" class=" referencesSlider__icon | db | fit oc" alt="${resellers[i].full_name}"></div><div style="margin-right:auto; margin-left:auto; padding-top:15px; min-width:50%"><a href="https://erp.sales.ioi.online/?var=${resellers[i].identification.toUpperCase()}#signup" onclick="gtag_report_conversion('https://erp.sales.ioi.online/?var=${resellers[i].identification.toUpperCase()}#signup', 'AW-11139658231/pOHSCIu8o5YYEPfj5r8p' ,11820690)"><button class="btn btn--s" style="top:50%;" type=submit><span class="btn__label">Essai gratuit / Commande</span><span class="btn__bg | fill"></span><svg class="m-only | nlForm__submitIcon | icon icon--arrow" viewBox="0 0 35 32" aria-hidden="true" fill="none" stroke-width="4" stroke="currentColor"><path d="M0 16h32" /><path d="m18 2 14 14-14 14" /></svg></button></a></div></div><div class="resellers-txt"><a onclick="map_focus(this)" data-lon="${resellers[i].longitude}" data-lat="${resellers[i].latitude}" class="pointer"><h3 class="location__title | title | fw-bold">${resellers[i].full_name}<br></h3><address class="location__address">${resellers[i].address}</address></a><p>${resellers[i].phone}${resellers[i].email?'<br><a href="mailto:' + resellers[i].email + '">' + resellers[i].email + '</a>':""}<br>${resellers[i].website?'<a href="' + resellers[i].website + '" target="_blank" rel="noopener">' + resellers[i].website.replace("https://","") + '</a>':""}</p></div><div class="mb-only"><div style="margin-right:auto; margin-left:auto; padding-top:15px; min-width:50%"><a href="https://erp.sales.ioi.online/?var=${resellers[i].identification.toUpperCase()}#signup" onclick="gtag_report_conversion('https://erp.sales.ioi.online/?var=${resellers[i].identification.toUpperCase()}#signup', 'AW-11139658231/pOHSCIu8o5YYEPfj5r8p' ,11820690)" `+'><button class="btn btn--s" style="top:50%;" type=submit><span class="btn__label">Essai gratuit / Commande</span><span class="btn__bg | fill"></span><svg class="m-only | nlForm__submitIcon | icon icon--arrow" ``viewBox="0 0 35 32" aria-hidden="true" fill="none" stroke-width="4" stroke="currentColor"><path d="M0 16h32" /><path d="m18 2 14 14-14 14" /></svg></button></a></div></div></div>';
                 locator_list.appendChild(elementli);
     
                 if(!used_resellers.includes(resellers[i].short_id)){
@@ -107,33 +107,34 @@ function trigger_opacity(){
     
                 used_resellers.push(resellers[i].short_id);
             }
-
-             //OpenStreetMap Leaflet
-
-
-            //default map
-            var map = L.map('map').setView([50.449563, 4.629463], 8);
-            var Esri_WorldTopoMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
-                attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
-            }).addTo(map);
-
-                for (let i = resellers.length - 1; i >= 0; i--) {
-                    L.marker( [resellers[i].latitude, resellers[i].longitude] )
-                    .bindPopup( `<a href="https://erp.sales.ioi.online/?var=`+resellers[i].identification.toUpperCase()+`#signup" onclick="gtag_report_conversion('https://erp.sales.ioi.online/?var=`+resellers[i].identification.toUpperCase()+`#signup', 'AW-11139658231/pOHSCIu8o5YYEPfj5r8p' ,11820690)" ><div class="marker_label" style="color:#5a14e6;">` + resellers[i].full_name + '</div><br><button class="btn marker_label_btn marker_label" style="top:50%; padding:9px; --size : 1.5rem;" type=submit><span class="btn__label">Essai&nbsp;gratuit&nbsp;/&nbsp;Commande</span><span class="btn__bg | fill"></span>' )
-                    .addTo( map );
-                }
         }
     });
 }
 
-//focused map
-function map_focus(source){
-    var vlon = source.dataset.longitude;
-    var vlat = source.dataset.latitude;
-    map.setView(new L.LatLng(vlat, vlon), 14);
-}
+    
     
 
 
- 
+  //OpenStreetMap Leaflet
+
+
+  //default map
+  var map = L.map('map').setView([50.449563, 4.629463], 8);
+  var Esri_WorldTopoMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
+  }).addTo(map);
+
+    for (let i = resellers.length - 1; i >= 0; i--) {
+        L.marker( [resellers[i].latitude, resellers[i].longitude] )
+        .bindPopup( `<a href="https://erp.sales.ioi.online/?var=`+resellers[i].identification.toUpperCase()+`#signup" onclick="gtag_report_conversion('https://erp.sales.ioi.online/?var=`+resellers[i].identification.toUpperCase()+`#signup', 'AW-11139658231/pOHSCIu8o5YYEPfj5r8p' ,11820690)" ><div class="marker_label" style="color:#5a14e6;">` + resellers[i].full_name + '</div><br><button class="btn marker_label_btn marker_label" style="top:50%; padding:9px; --size : 1.5rem;" type=submit><span class="btn__label">Essai&nbsp;gratuit&nbsp;/&nbsp;Commande</span><span class="btn__bg | fill"></span>' )
+        .addTo( map );
+    }
+  
+  
+  //focused map
+  function map_focus(source){
+      var vlon = source.dataset.longitude;
+      var vlat = source.dataset.latitude;
+      map.setView(new L.LatLng(vlat, vlon), 14);
+  }
   
