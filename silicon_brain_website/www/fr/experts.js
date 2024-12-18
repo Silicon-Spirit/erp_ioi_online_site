@@ -59,7 +59,7 @@ function trigger_opacity(){
   
     frappe.call({
         method:"silicon_brain_website.silicon_brain_website.doctype.ioi_site_reseller.ioi_site_reseller.get_site_resellers",
-        async: true,
+        async: false,
         callback: function (r) {
             var locator_list= document.getElementById("locator_list");
             var reseller_card_list=document.getElementById("reseller_card_list");
