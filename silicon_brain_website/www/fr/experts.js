@@ -53,12 +53,12 @@ function trigger_opacity(){
         method:"silicon_brain_website.silicon_brain_website.doctype.ioi_site_reseller.ioi_site_reseller.get_site_resellers",
         async: false,
         callback: function (r) {
-        var locator_list= document.getElementById("locator_list");
-        var reseller_card_list=document.getElementById("reseller_card_list");
-        var reseller_list=document.getElementById("reseller_list");
+            var locator_list= document.getElementById("locator_list");
+            var reseller_card_list=document.getElementById("reseller_card_list");
+            var reseller_list=document.getElementById("reseller_list");
 
-        var used_resellers = [];
-        resellers=r.message;
+            var used_resellers = [];
+            resellers=r.message;
         
         
             for (let i = resellers.length - 1; i >= 0; i--) {
@@ -107,34 +107,33 @@ function trigger_opacity(){
     
                 used_resellers.push(resellers[i].short_id);
             }
+
+             //OpenStreetMap Leaflet
+
+
+            //default map
+            var map = L.map('map').setView([50.449563, 4.629463], 8);
+            var Esri_WorldTopoMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+                attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
+            }).addTo(map);
+
+                for (let i = resellers.length - 1; i >= 0; i--) {
+                    L.marker( [resellers[i].latitude, resellers[i].longitude] )
+                    .bindPopup( `<a href="https://erp.sales.ioi.online/?var=`+resellers[i].identification.toUpperCase()+`#signup" onclick="gtag_report_conversion('https://erp.sales.ioi.online/?var=`+resellers[i].identification.toUpperCase()+`#signup', 'AW-11139658231/pOHSCIu8o5YYEPfj5r8p' ,11820690)" ><div class="marker_label" style="color:#5a14e6;">` + resellers[i].full_name + '</div><br><button class="btn marker_label_btn marker_label" style="top:50%; padding:9px; --size : 1.5rem;" type=submit><span class="btn__label">Essai&nbsp;gratuit&nbsp;/&nbsp;Commande</span><span class="btn__bg | fill"></span>' )
+                    .addTo( map );
+                }
         }
     });
 }
 
+//focused map
+function map_focus(source){
+    var vlon = source.dataset.longitude;
+    var vlat = source.dataset.latitude;
+    map.setView(new L.LatLng(vlat, vlon), 14);
+}
     
-    
 
 
-  //OpenStreetMap Leaflet
-
-
-  //default map
-  var map = L.map('map').setView([50.449563, 4.629463], 8);
-  var Esri_WorldTopoMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
-      attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
-  }).addTo(map);
-
-    for (let i = resellers.length - 1; i >= 0; i--) {
-        L.marker( [resellers[i].latitude, resellers[i].longitude] )
-        .bindPopup( `<a href="https://erp.sales.ioi.online/?var=`+resellers[i].identification.toUpperCase()+`#signup" onclick="gtag_report_conversion('https://erp.sales.ioi.online/?var=`+resellers[i].identification.toUpperCase()+`#signup', 'AW-11139658231/pOHSCIu8o5YYEPfj5r8p' ,11820690)" ><div class="marker_label" style="color:#5a14e6;">` + resellers[i].full_name + '</div><br><button class="btn marker_label_btn marker_label" style="top:50%; padding:9px; --size : 1.5rem;" type=submit><span class="btn__label">Essai&nbsp;gratuit&nbsp;/&nbsp;Commande</span><span class="btn__bg | fill"></span>' )
-        .addTo( map );
-    }
-  
-  
-  //focused map
-  function map_focus(source){
-      var vlon = source.dataset.longitude;
-      var vlat = source.dataset.latitude;
-      map.setView(new L.LatLng(vlat, vlon), 14);
-  }
+ 
   
