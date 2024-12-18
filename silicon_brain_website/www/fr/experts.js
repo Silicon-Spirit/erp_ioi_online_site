@@ -23,26 +23,6 @@ function trigger_opacity(){
       trigger_opacity()
   }) 
   
-  let sip_summary = "<div class='summary_txt'>SIP est un intégrateur ERP, spécialisé en solutions pour PME.<br>"+
-  "Grâce à une équipe de 23 personnes et de 6 consultants senior, SIP offre un service complet autour de votre ERP :<br>"+
-  "configuration, formation, accompagnement et suivi de votre projet sur le très long terme.<br>"+
-  "Les 2 plus-values de SIP :<br>"+
-  "<ul class='summary_list'><li>un suivi et une approche personnalisés pour tirer le meilleur de votre outil ERP.</li>"+
-  "<li>des solutions pour compléter votre ERP : cloud privé, Azure, Microsoft 365, Plateforme e-commerce, cybersécurité, …</li></ul></div>";
-
-  let ibgraf_summary ="<div class='summary_txt'>IBGraf vise à aider les acteurs économiques, quelles que soient leurs spécificités, à disposer des meilleures solutions en informatique de gestion proposées par les meilleurs éditeurs,<br>"+
-  "pour leur permettre de gérer et de piloter sereinement leurs activités. Nos valeurs : maturité & vitalité, respect & bienveillance,<br><br>"+
-  "expertise métier & performance.</div>";
-
-  let brainstorming_summary = "<div class='summary_txt'>Brainstorming promet à l’entreprise une gestion sereine via une expérience I.T. simple et optimisée.<br><br>"+
-  "Notre équipe d’expert métier optimisera la gestion de votre entreprise grâce à des solutions innovantes.<br><br>"+
-  "Cinq métiers sont assurés par 40 passionnés<br>"+
-  "<ul class='summary_list'><li>ERP Business Management</li>"+
-  "<li>Accounting Software</li>"+
-  "<li>Business Intelligence</li>"+
-  "<li>System Infrastructure</li>"+
-  "<li>Cloud Computing</li></ul></div>"
-  
 //OpenStreetMap Leaflet
   //default map
   var map = L.map('map').setView([50.449563, 4.629463], 8);
