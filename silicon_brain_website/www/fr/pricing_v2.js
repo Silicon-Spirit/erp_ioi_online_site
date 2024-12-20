@@ -1,4 +1,26 @@
-window.onload = function () {
+var reveal_tooltip = function () {
+	var tooltip_name = this.dataset.value;
+	var tooltip = document.getElementById(tooltip_name);
+	tooltip.style.display = "block";
+  };
+  
+  var hide_tooltip = function () {
+	var tooltip_name = this.dataset.value;
+	var tooltip = document.getElementById(tooltip_name);
+	tooltip.style.display = "none";
+  };
+  
+  window.onload = function () {
+	const targets = document.getElementsByClassName("feature left");
+  
+	// change display to 'block' on mouseover
+	for (var i = 0; i < targets.length; i++) {
+	  targets[i].addEventListener("mouseover", reveal_tooltip, false);
+  
+	  // change display to 'none' on mouseleave
+	  targets[i].addEventListener("mouseleave", hide_tooltip, false);
+	}
+
 	let four_resellers_el=document.querySelector(".case.case--four")
 	if(four_resellers_el){
 		console.log("if")
@@ -21,30 +43,6 @@ window.onload = function () {
 				
 			}
 		})
-	}
-}
-
-var reveal_tooltip = function () {
-	var tooltip_name = this.dataset.value;
-	var tooltip = document.getElementById(tooltip_name);
-	tooltip.style.display = "block";
-  };
-  
-  var hide_tooltip = function () {
-	var tooltip_name = this.dataset.value;
-	var tooltip = document.getElementById(tooltip_name);
-	tooltip.style.display = "none";
-  };
-  
-  window.onload = function () {
-	const targets = document.getElementsByClassName("feature left");
-  
-	// change display to 'block' on mouseover
-	for (var i = 0; i < targets.length; i++) {
-	  targets[i].addEventListener("mouseover", reveal_tooltip, false);
-  
-	  // change display to 'none' on mouseleave
-	  targets[i].addEventListener("mouseleave", hide_tooltip, false);
 	}
   };
   
