@@ -4,7 +4,7 @@
 import frappe
 from frappe.model.document import Document
 
-from frappe.website.utils import delete_page_cache
+from frappe.website.utils import clear_website_cache,delete_page_cache
 
 
 class ioiSiteNews(Document):
@@ -56,8 +56,11 @@ class ioiSiteNews(Document):
 			
 			self.single_result=singleHtml
 
+@frappe.whitelist()
+def ioi_clear_website_cache():
+	clear_website_cache()
 
 @frappe.whitelist()
-def clear_website_cache():
+def clear_news_cache():
 	delete_page_cache("/fr/news_v2")
 	delete_page_cache("/fr/news01")
