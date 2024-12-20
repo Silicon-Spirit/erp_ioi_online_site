@@ -13,7 +13,10 @@ class ioiSiteReseller(Document):
 
 @frappe.whitelist(allow_guest=True)
 def get_site_resellers(number=0):
-	site_resellers=frappe.get_all("ioi Site Reseller",fields=["short_id","full_name","identification","address","phone","email","website","longitude","latitude","image","nav_id","summary"],filters={"enabled":True})
+	if number:
+		site_resellers=frappe.get_all("ioi Site Reseller",fields=["short_id","full_name","identification","address","phone","email","website","longitude","latitude","image","nav_id","summary"],filters={"enabled":True},group_by="short_id")
+	else:
+		site_resellers=frappe.get_all("ioi Site Reseller",fields=["short_id","full_name","identification","address","phone","email","website","longitude","latitude","image","nav_id","summary"],filters={"enabled":True})
 	site_resellers_l=len(site_resellers)
 	if number:
 		number=cint(number)
