@@ -16,6 +16,11 @@ frappe.ui.form.on("ioi Site News", {
 				frm.save()
 			}, true);
 		}
+		frm.add_custom_button(__("Clear News Website Cache"), () => {
+			frappe.call({
+				method:"silicon_brain_website.silicon_brain_website.doctype.ioi_site_news.ioi_site_news.clear_website_cache",
+			})
+		});
 	}
 	
 });
