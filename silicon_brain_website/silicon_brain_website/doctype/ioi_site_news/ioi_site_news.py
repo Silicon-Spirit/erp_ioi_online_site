@@ -10,9 +10,10 @@ class ioiSiteNews(Document):
 		
 		if self.freeze_portal_result:
 			self.portal_result.replace("""<div class="container-ms">
-		<div class="content-news">""","").replace("""
-		</div>
-	</div>""","")
+		<div class="content-news">
+			""","").replace("""
+	</div>
+</div>""","")
 		else:
 			newsHtml=f"""<div class="item-n">
 			<div class="img-n" style="background-image: url('{self.image}');"></div>
