@@ -16,13 +16,6 @@ frappe.ui.form.on("ioi Site News", {
 				frm.save()
 			}, true);
 		}
-		if(frm.doc.portal_result){
-			frm.set_value("portal_result",`<div class="container-ms">
-		<div class="content-news">
-			`+frm.doc.portal_result+`
-	</div>
-</div>`)
-		}
 	}
 	
 });

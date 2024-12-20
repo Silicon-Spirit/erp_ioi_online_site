@@ -20,6 +20,7 @@
   "results_tab",
   "freeze_portal_result",
   "portal_result",
+  "real_portal_result",
   "freeze_single_result",
   "single_result"
  ],
@@ -98,6 +99,12 @@
    "label": "Freeze Portal Result"
   },
   {
+   "fieldname": "real_portal_result",
+   "fieldtype": "HTML Editor",
+   "hidden": 1,
+   "label": "Real Portal Result"
+  },
+  {
    "default": "0",
    "fieldname": "freeze_single_result",
    "fieldtype": "Check",
@@ -106,7 +113,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-20 13:40:55.560954",
+ "modified": "2024-12-20 13:59:47.501704",
  "modified_by": "Administrator",
  "module": "Silicon Brain Website",
  "name": "ioi Site News",

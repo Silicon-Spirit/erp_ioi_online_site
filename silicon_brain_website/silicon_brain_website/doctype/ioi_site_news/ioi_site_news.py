@@ -8,14 +8,10 @@ from frappe.model.document import Document
 class ioiSiteNews(Document):
 	def validate(self):
 		
-		if self.freeze_portal_result:
-			self.portal_result.replace("""<div class="container-ms">
-		<div class="content-news">
-			""","").replace("""
-	</div>
-</div>""","")
-		else:
-			newsHtml=f"""<div class="item-n">
+		if not self.freeze_portal_result:
+			newsHtml=f"""<div class="container-ms">
+	<div class="content-news">
+		<div class="item-n">
 			<div class="img-n" style="background-image: url('{self.image}');"></div>
 			<div class="info-n">
 				<span>{self.date}</span>
@@ -24,8 +20,17 @@ class ioiSiteNews(Document):
 			<h2>{self.title}</h2>
 			<p>{self.description}</p>
 			<a href="/fr/news01?news={self.name}" class="classic-link">Voir la news</a>
-		</div>"""
+		</div>
+	</div>
+</div>"""
 			self.portal_result=newsHtml
+
+		if self.portal_result:
+			self.real_portal_result=self.portal_result.replace("""<div class="container-ms">
+	<div class="content-news">
+		""","").replace("""
+	</div>
+</div>""","")
 		
 		if not self.freeze_single_result:
 			singleHtml=f"""<section class="web-body web-body--applications">
