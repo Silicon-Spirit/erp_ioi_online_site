@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2024-12-20 11:09:19.489005",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "column_break_jcvs",
+  "image",
+  "section_break_kmvv",
+  "title",
+  "column_break_orwo",
+  "subject",
+  "image_shown",
+  "section_break_nxvu",
+  "description",
+  "content",
+  "results_tab",
+  "freeze_portal_result",
+  "portal_result",
+  "freeze_single_result",
+  "single_result"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "HTML Editor",
+   "label": "Title"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "HTML Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "HTML Editor",
+   "label": "Content"
+  },
+  {
+   "fieldname": "column_break_jcvs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Must be set as public",
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "section_break_kmvv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_orwo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_nxvu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject"
+  },
+  {
+   "fieldname": "portal_result",
+   "fieldtype": "HTML Editor",
+   "label": "Portal Result"
+  },
+  {
+   "fieldname": "single_result",
+   "fieldtype": "HTML Editor",
+   "label": "Single Result"
+  },
+  {
+   "fieldname": "image_shown",
+   "fieldtype": "Image",
+   "options": "image"
+  },
+  {
+   "fieldname": "results_tab",
+   "fieldtype": "Tab Break",
+   "label": "Results"
+  },
+  {
+   "default": "0",
+   "fieldname": "freeze_portal_result",
+   "fieldtype": "Check",
+   "label": "Freeze Portal Result"
+  },
+  {
+   "default": "0",
+   "fieldname": "freeze_single_result",
+   "fieldtype": "Check",
+   "label": "Freeze Single Result"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-20 12:56:51.294764",
+ "modified_by": "Administrator",
+ "module": "Silicon Brain Website",
+ "name": "ioi Site News",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
