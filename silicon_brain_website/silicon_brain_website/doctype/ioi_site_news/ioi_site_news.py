@@ -56,11 +56,11 @@ class ioiSiteNews(Document):
 			
 			self.single_result=singleHtml
 
+			if self.portal_result or self.single_result:
+
+				delete_page_cache("/fr/news_v2")
+				delete_page_cache("/fr/news01")
+
 @frappe.whitelist()
 def ioi_clear_website_cache():
 	clear_website_cache()
-
-@frappe.whitelist()
-def clear_news_cache():
-	delete_page_cache("/fr/news_v2")
-	delete_page_cache("/fr/news01")
