@@ -85,8 +85,8 @@ function trigger_opacity(){
                 elementnav.setAttribute('id', resellers[i].nav_id);
                 elementnav.className="brainstorming-nav nav-all hidden_nav";
                 let summary = ""
-                if(resellers[i].summary !== ""){
-                summary = '</div><div class="summary-txt"><p>'+ resellers[i].summary +'</p></div>';
+                if(resellers[i].summary !== "" && resellers[i].summary != "null"){
+                summary = '<div class="summary-txt"><p>'+ resellers[i].summary +'</p></div>';
                 }
                 elementnav.innerHTML = '<div class="nav-header"><a href='+ resellers[i].website +'><img class="nav-img" src='+ resellers[i].image +' loading="lazy" alt="'+ resellers[i].full_name +'"/> </a>' + summary + navhtml;
                 reseller_list.appendChild(elementnav);
