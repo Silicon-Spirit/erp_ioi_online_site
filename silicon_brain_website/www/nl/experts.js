@@ -97,7 +97,7 @@ window.onload = function () {
 
               //OpenStreetMap Leaflet
               L.marker( [resellers[i].latitude, resellers[i].longitude] )
-          .bindPopup( `<a href="https://erp.sales.ioi.online/?var=`+resellers[i].identification.toUpperCase()+`#signup" onclick="gtag_report_conversion('https://erp.sales.ioi.online/?var=`+resellers[i].identification.toUpperCase()+`#signup', 'AW-11139658231/pOHSCIu8o5YYEPfj5r8p' ,11820690)" ><div class="marker_label" style="color:#5a14e6;">` + resellers[i].full_name + '</div><br><button class="btn marker_label_btn marker_label" style="top:50%; padding:9px; --size : 1.5rem;" type=submit><span class="btn__label">Essai&nbsp;gratuit&nbsp;/&nbsp;Commande</span><span class="btn__bg | fill"></span>' )
+          .bindPopup( `<a href="https://erp.sales.ioi.online/?var=`+resellers[i].identification.toUpperCase()+`#signup" onclick="gtag_report_conversion('https://erp.sales.ioi.online/?var=`+resellers[i].identification.toUpperCase()+`#signup', 'AW-11139658231/pOHSCIu8o5YYEPfj5r8p' ,11820690)" ><div class="marker_label" style="color:#5a14e6;">` + resellers[i].full_name + '</div><br><button class="btn marker_label_btn marker_label" style="top:50%; padding:9px; --size : 1.5rem;" type=submit><span class="btn__label">Probeer&nbsp;gratis&nbsp;/&nbsp;Bestel</span><span class="btn__bg | fill"></span>' )
           .addTo( map );
           }
       }
