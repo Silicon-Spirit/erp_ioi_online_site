@@ -3,7 +3,7 @@
 <html class="no-js preload">
 
 {% block meta_block %}
-<meta name="language" value="fr" />
+<meta name="language" value="nl" />
 {% endblock %}
 
 {% block head %}
@@ -14,14 +14,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 <!-- Metas -->
-<title>Silicon ioi, votre ERP, notre création</title>
+<title>Silicon ioi, jouw erp, onze creatie</title>
 
-<meta name="description" content="Rencontrez Silicon Brain, les personnes derrière votre ERP" />
+<meta name="description" content="Maak kennis met Silicon Brain, de mensen achter uw ERP" />
 <meta name="keywords" content="" />
 
 <meta property="og:site_name" content="Silicon ioi" />
-<meta property="og:title" content="Silicon ioi, votre ERP, notre création" />
-<meta property="og:description" content="Rencontrez Silicon Brain, les personnes derrière votre ERP" />
+<meta property="og:title" content="Silicon ioi, jouw erp, onze creatie" />
+<meta property="og:description" content="Maak kennis met Silicon Brain, de mensen achter uw ERP" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost" />
 <meta property="og:image" content="/files/og-share-img.jpg" />
@@ -31,8 +31,8 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="Silicon ioi" />
 <meta name="twitter:creator" content="" />
-<meta name="twitter:title" content="Silicon ioi, votre ERP, notre création" />
-<meta name="twitter:description" content="Rencontrez SIlicon Brain, les personnes derrière votre ERP" />
+<meta name="twitter:title" content="Silicon ioi, jouw erp, onze creatie" />
+<meta name="twitter:description" content="Maak kennis met Silicon Brain, de mensen achter uw ERP" />
 <meta name="twitter:image" content="/files/og-share-img.jpg" />
 
 <!-- Viewport -->
@@ -64,10 +64,6 @@
 <meta name="msapplication-wide310x150logo" content="/files/win/mstile-310x150.png" />
 <meta name="msapplication-square310x310logo" content="/files/win/mstile-310x310.png" />
 
-<!-- Links-->
-<link rel="stylesheet" href="/files/web_template/2024/12/home_fr/css.css">
-<script type="module" crossorigin src="/files/web_template/2024/12/home_fr/app.js"></script>
-
 <script>
   (function () {
     var c = document.documentElement.classList,
@@ -93,9 +89,9 @@
 
 <body data-v="about">
 
-  {% set test = frappe.db.get_value("Web Template","Header ioi fr","template") %}
+  {% set test = frappe.get_doc("Web Template","Header ioi nl",fields=["about"]).template %}
     
-  {% set args = {"current_page" : 2, "relative_page_link" : "sales", "home" : 0} %}
+  {% set args = {"current_page" : 2, "relative_page_link" : "accounting", "home" : 0} %}
   
   {{frappe.render_template(test,args)}}
 
@@ -103,12 +99,12 @@
   <div class="router">
       <div class="view view--about">
 
-          {{frappe.db.get_value("Web Template","Sales fr","template")}}
+          {{frappe.db.get_value("Web Template","Accounting nl","template")}}
 
 
 
-          {{frappe.db.get_value("Web Template","Footer ioi fr","template")}}
-    </div>
+          {{frappe.db.get_value("Web Template","Footer ioi nl","template")}}
+  </div>
   </div>
 
   <div id="grid-ctn" class="ctn">

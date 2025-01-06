@@ -3,7 +3,7 @@
 <html class="no-js preload">
 
 {% block meta_block %}
-<meta name="language" value="fr" />
+<meta name="language" value="en" />
 {% endblock %}
 
 {% block head %}
@@ -14,16 +14,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <!-- Metas -->
-<title>Contact</title>
+<title>Silicon ioi, your ERP, our creation</title>
 
-<meta name="title" content="Contact">
-<meta name="language" content="fr">
-<meta name="description" content="Silicon Brain - Contact">
-<meta name="keywords" content="contact">
+<meta name="description" content="Meet Silicon Brain, the people behind your ERP">
+<meta name="keywords" content="">
 
 <meta property="og:site_name" content="Silicon ioi">
-<meta property="og:title" content="Contact">
-<meta property="og:description" content="Silicon Brain - Nous contacter">
+<meta property="og:title" content="Silicon ioi, your ERP, our creation">
+<meta property="og:description" content="Meet Silicon Brain, the people behind your ERP">
 <meta property="og:type" content="website">
 <meta property="og:url" content="http://localhost">
 <meta property="og:image" content="/files/og-share-img.jpg">
@@ -33,8 +31,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="Silicon ioi">
 <meta name="twitter:creator" content="">
-<meta name="twitter:title" content="Contact">
-<meta name="twitter:description" content="Silicon Brain - Nous contacter">
+<meta name="twitter:title" content="Silicon ioi, your ERP, our creation">
+<meta name="twitter:description" content="Meet Silicon Brain, the people behind your ERP">
 <meta name="twitter:image" content="/files/og-share-img.jpg">
 
 
@@ -73,10 +71,6 @@
 <meta name="msapplication-wide310x150logo" content="/files/win/mstile-310x150.png">
 <meta name="msapplication-square310x310logo" content="/files/win/mstile-310x310.png">
 
-<!-- Links-->
-<link rel="stylesheet" href="/files/web_template/2024/12/home_fr/css.css">
-<script type="module" crossorigin src="/files/web_template/2024/12/home_fr/app.js"></script>
-
 
 <script>(function () { var c = document.documentElement.classList, ua = navigator.userAgent; c.remove('no-js'); c.toggle('ie', (ua.indexOf('MSIE ') > -1 || ua.indexOf('Trident/') > -1)); }());</script>
 <script>(function () { document.documentElement.style.setProperty('--rawVph', window.innerHeight); })()</script>
@@ -90,37 +84,45 @@
 
 
 
-<body data-v="contact">
+<body data-v="about">
 
 
 
-  {% set test = frappe.db.get_value("Web Template","Header ioi fr","template") %}
+    {% set test = frappe.db.get_value("Web Template","Header ioi en","template") %}
+
+    {% set args = {"current_page" : 2, "relative_page_link" : "news_v2", "home" : 0} %}
     
-  {% set args = {"current_page" : 0, "relative_page_link" : "contact_v2", "home" : 0} %}
-  
-  {{frappe.render_template(test,args)}}
+    {{frappe.render_template(test,args)}}
 
 
-  <div class="router">
-      <div class="view view--about">
+    <div class="router">
+        <div class="view view--about">
 
-          {{frappe.db.get_value("Web Template","Contact V2 fr","template")}}
+            {{frappe.db.get_value("Web Template","News en","template")}}
 
 
 
-          {{frappe.db.get_value("Web Template","Footer ioi fr","template")}}
+            {{frappe.db.get_value("Web Template","Footer ioi en","template")}}
+
+        </div>
     </div>
-  </div>
 
-  <div id="grid-ctn" class="ctn">
-    <div id="grid" class="row | pr">
-      <div class="gridSizer | colSizer | col-1 | t-col-1 | m-col-1"></div>
-      <div class="gridSizer | gutSizer"></div>
+
+
+    <div id="grid-ctn" class="ctn">
+        <div id="grid" class="row | pr">
+
+            <div class="gridSizer | colSizer | col-1 | t-col-1 | m-col-1"></div>
+            <div class="gridSizer | gutSizer"></div>
+
+        </div>
     </div>
-  </div>
 
-  <script
-    src="https://cdn.polyfill.io/v3/polyfill.min.js?features=default,es6,fetch,Object.entries,Object.values,IntersectionObserver,Array.from&flags=gated"></script>
+
+    <script
+        src="https://cdn.polyfill.io/v3/polyfill.min.js?features=default,es6,fetch,Object.entries,Object.values,IntersectionObserver,Array.from&flags=gated"></script>
+
+
 </body>
 {%endblock%}
 
