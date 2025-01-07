@@ -64,7 +64,7 @@ class ioiSiteNews(WebsiteGenerator):
 		if not self.route:
 			self.route=f"{self.language}/news1/{self.name}"
 
-		if not "news1" in self.route:
+		if not "news1" in self.route or not self.language+"/" in self.route:
 			self.route=f"{self.language}/news1/{self.name}"
 
 
