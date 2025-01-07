@@ -1,3 +1,3 @@
 import frappe
 
-sitemap=1
+sitemap = 1

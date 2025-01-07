@@ -21,7 +21,7 @@ class ioiSiteNews(Document):
 			</div>
 			<h2>{self.title}</h2>
 			<p>{self.description}</p>
-			<a href="/fr/news01?news={self.name}" class="classic-link">Voir la news</a>
+			<a href="/fr/news1?news={self.name}" class="classic-link">Voir la news</a>
 		</div>
 	</div>
 </div>"""
@@ -58,8 +58,8 @@ class ioiSiteNews(Document):
 
 			if self.portal_result or self.single_result:
 
-				delete_page_cache("/fr/news_v2")
-				delete_page_cache("/fr/news01")
+				delete_page_cache("/fr/news")
+				delete_page_cache("/fr/news1")
 
 @frappe.whitelist()
 def ioi_clear_website_cache():

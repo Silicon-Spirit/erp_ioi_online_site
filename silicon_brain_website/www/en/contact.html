@@ -1,5 +1,4 @@
 {% extends "templates/web.html" %}
-
 <!doctype html>
 <html class="no-js preload">
 
@@ -15,14 +14,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <!-- Metas -->
-<title>Contact us</title>
+<title>Silicon ioi, your ERP, our creation</title>
 
-<meta name="description" content="Silicon Brain - Contact Us">
+<meta name="description" content="Meet Silicon Brain, the people behind your ERP">
 <meta name="keywords" content="">
 
 <meta property="og:site_name" content="Silicon ioi">
-<meta property="og:title" content="Contact us">
-<meta property="og:description" content="Silicon Brain - Contact Us">
+<meta property="og:title" content="Silicon ioi, your ERP, our creation">
+<meta property="og:description" content="Meet Silicon Brain, the people behind your ERP">
 <meta property="og:type" content="website">
 <meta property="og:url" content="http://localhost">
 <meta property="og:image" content="/files/og-share-img.jpg">
@@ -32,8 +31,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="Silicon ioi">
 <meta name="twitter:creator" content="">
-<meta name="twitter:title" content="Contact us">
-<meta name="twitter:description" content="Silicon Brain - Contact Us">
+<meta name="twitter:title" content="Silicon ioi, your ERP, our creation">
+<meta name="twitter:description" content="Meet Silicon Brain, the people behind your ERP">
 <meta name="twitter:image" content="/files/og-share-img.jpg">
 
 
@@ -70,38 +69,45 @@
 <meta name="msapplication-square70x70logo" content="/files/win/mstile-70x70.png">
 <meta name="msapplication-square150x150logo" content="/files/win/mstile-150x150.png">
 <meta name="msapplication-wide310x150logo" content="/files/win/mstile-310x150.png">
-<meta name="msapplication-square310x310logo" content="/files/win/mstile-310x310.png">
+<meta name="msapplication-square310x310logo" content="/files/win/mstile-310x310.png" />
+
+<!-- Links-->
+<link rel="stylesheet" href="/files/web_template/2024/12/home_fr/css.css">
+<script type="module" crossorigin src="/files/web_template/2024/12/home_fr/app.js"></script>
 
 
 <script>(function () { var c = document.documentElement.classList, ua = navigator.userAgent; c.remove('no-js'); c.toggle('ie', (ua.indexOf('MSIE ') > -1 || ua.indexOf('Trident/') > -1)); }());</script>
 <script>(function () { document.documentElement.style.setProperty('--rawVph', window.innerHeight); })()</script>
 <script type="module" crossorigin src="/files/app.8687006f.js"></script>
 <link rel="stylesheet" href="/files/app.54b7b081.css">
-{% endblock%}
-
+{%endblock%}
 
 
 {% block page_content %}
 
-<body data-v="contact">
+
+
+
+<body data-v="about">
 
 
 
     {% set test = frappe.db.get_value("Web Template","Header ioi en","template") %}
 
-    {% set args = {"current_page" : 0, "relative_page_link" : "contact", "home" : 0} %}
+    {% set args = {"current_page" : 2, "relative_page_link" : "contact", "home" : 0} %}
     
     {{frappe.render_template(test,args)}}
 
 
     <div class="router">
-        <div class="view view--contact">
+        <div class="view view--about">
 
-            {{frappe.db.get_value("Web Template","Contact Us EN","template")}}
+            {{frappe.db.get_value("Web Template","Contact v2 en","template")}}
 
 
 
             {{frappe.db.get_value("Web Template","Footer ioi en","template")}}
+
         </div>
     </div>
 
@@ -122,6 +128,6 @@
 
 
 </body>
-{% endblock%}
+{%endblock%}
 
 </html>

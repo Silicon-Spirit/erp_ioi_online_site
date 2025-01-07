@@ -94,7 +94,7 @@
 
     {% set test = frappe.db.get_value("Web Template","Header ioi en","template") %}
 
-    {% set args = {"current_page" : 2, "relative_page_link" : "news", "home" : 0} %}
+    {% set args = {"current_page" : 2, "relative_page_link" : "expert_accounting", "home" : 0} %}
     
     {{frappe.render_template(test,args)}}
 
@@ -102,7 +102,7 @@
     <div class="router">
         <div class="view view--about">
 
-            {{frappe.db.get_value("Web Template","News en","template")}}
+            {{frappe.db.get_value("Web Template","Expert Accounting en","template")}}
 
 
 

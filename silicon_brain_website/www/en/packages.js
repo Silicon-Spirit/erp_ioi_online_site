@@ -1,7 +1,7 @@
 window.onload = function () {
 	let four_resellers_el=document.querySelector(".case.case--four")
 	if(four_resellers_el){
-		console.log("if")
+		
 		frappe.call({
 			method:"silicon_brain_website.silicon_brain_website.doctype.ioi_site_reseller.ioi_site_reseller.get_site_resellers",
 			async: true,

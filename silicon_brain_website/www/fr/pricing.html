@@ -2,6 +2,10 @@
 <!DOCTYPE html>
 <html class="no-js preload">
 
+{% block meta_block %}
+<meta name="language" value="fr" />
+{% endblock %}
+
 {% block head %}
 
 {{frappe.db.get_value("Web Template","Head","template")}}
@@ -10,14 +14,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 <!-- Metas -->
-<title>Silicon ioi - Prix</title>
+<title>Silicon ioi, votre ERP, notre création</title>
 
-<meta name="description" content="Silicon ioi est vraiment abordable pour votre entreprise" />
+<meta name="description" content="Rencontrez Silicon Brain, les personnes derrière votre ERP" />
 <meta name="keywords" content="" />
 
-<meta property="og:site_name" content="Silicon Brain" />
-<meta property="og:title" content="Silicon ioi - Prix" />
-<meta property="og:description" content="Silicon ioi est vraiment abordable pour votre entreprise" />
+<meta property="og:site_name" content="Silicon ioi" />
+<meta property="og:title" content="Silicon ioi, votre ERP, notre création" />
+<meta property="og:description" content="Rencontrez Silicon Brain, les personnes derrière votre ERP" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost" />
 <meta property="og:image" content="/files/og-share-img.jpg" />
@@ -25,10 +29,10 @@
 <meta property="og:image:height" content="630" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="Silicon Brain" />
+<meta name="twitter:site" content="Silicon ioi" />
 <meta name="twitter:creator" content="" />
-<meta name="twitter:title" content="Silicon ioi - Prix" />
-<meta name="twitter:description" content="Silicon ioi est vraiment abordable pour votre entreprise" />
+<meta name="twitter:title" content="Silicon ioi, votre ERP, notre création" />
+<meta name="twitter:description" content="Rencontrez SIlicon Brain, les personnes derrière votre ERP" />
 <meta name="twitter:image" content="/files/og-share-img.jpg" />
 
 <!-- Viewport -->
@@ -60,6 +64,10 @@
 <meta name="msapplication-wide310x150logo" content="/files/win/mstile-310x150.png" />
 <meta name="msapplication-square310x310logo" content="/files/win/mstile-310x310.png" />
 
+<!-- Links-->
+<link rel="stylesheet" href="/files/web_template/2024/12/home_fr/css.css">
+<script type="module" crossorigin src="/files/web_template/2024/12/home_fr/app.js"></script>
+
 <script>
   (function () {
     var c = document.documentElement.classList,
@@ -77,31 +85,30 @@
   })();
 </script>
 <script type="module" crossorigin src="/files/app.8687006f.js"></script>
-<link rel="stylesheet" href="https://formden.com/static/assets/demos/bootstrap-iso/bootstrap-iso/bootstrap-iso.css">
 <link rel="stylesheet" href="/files/app.54b7b081.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>{%endblock%}
+{%endblock%}
 
 
 {% block page_content %}
 
 <body data-v="about">
-    {% set test = frappe.db.get_value("Web Template","Header ioi fr","template") %}
+
+  {% set test = frappe.db.get_value("Web Template","Header ioi fr","template") %}
     
-    {% set args = {"current_page" : 8, "relative_page_link" : "pricing", "home" : 0} %}
-    
-    {{frappe.render_template(test,args)}}
+  {% set args = {"current_page" : 2, "relative_page_link" : "pricing", "home" : 0} %}
   
-  
-    <div class="router">
-        <div class="view view--about">
-  
-            {{frappe.db.get_value("Web Template","Ready FR","template")}}
-  
-  
-  
-            {{frappe.db.get_value("Web Template","Footer ioi fr","template")}}
-  </div>
+  {{frappe.render_template(test,args)}}
+
+
+  <div class="router">
+      <div class="view view--about">
+
+          {{frappe.db.get_value("Web Template","Pricing fr","template")}}
+
+
+
+          {{frappe.db.get_value("Web Template","Footer ioi fr","template")}}
+    </div>
   </div>
 
   <div id="grid-ctn" class="ctn">
