@@ -74,8 +74,7 @@
    "fieldname": "subject",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Subject",
-   "reqd": 1
+   "label": "Subject"
   },
   {
    "fieldname": "portal_result",
@@ -139,7 +138,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "enabled",
  "links": [],
- "modified": "2025-01-07 15:19:35.542049",
+ "modified": "2025-01-07 15:31:17.944914",
  "modified_by": "Administrator",
  "module": "Silicon Brain Website",
  "name": "ioi Site News",
