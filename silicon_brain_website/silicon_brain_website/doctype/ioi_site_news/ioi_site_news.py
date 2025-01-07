@@ -4,6 +4,8 @@
 import frappe
 from frappe.website.website_generator import WebsiteGenerator
 
+from frappe import _
+
 from frappe.website.utils import clear_website_cache,delete_page_cache
 
 
@@ -36,6 +38,7 @@ class ioiSiteNews(WebsiteGenerator):
 </div>""","")
 		
 		if not self.freeze_single_result:
+			news_path=self.language+"/news"
 			singleHtml=f"""<section class="web-body web-body--applications">
 		<div class="container-head-b">
 			<div class="head-banner">
@@ -45,7 +48,7 @@ class ioiSiteNews(WebsiteGenerator):
 	</section>
 	<section class="main-content">
 		<div class="container-ms">
-			<a href="" class="single-btn">Voir toutes les news</a>
+			<a href="""+news_path+f""" class="single-btn">{_("See all news",self.language)}</a>
 
 			<div class="content-single-col">
 				{self.content}
