@@ -120,7 +120,7 @@ crossorigin=""></script>
     
       {% set test = frappe.db.get_value("Web Template","Header ioi fr","template") %}
     
-      {% set args = {"current_page" : 5, "relative_page_link" : "experts", "home" : 0} %}
+      {% set args = {"current_page" : 0, "relative_page_link" : "experts", "home" : 0} %}
       
       {{frappe.render_template(test,args)}}
     
