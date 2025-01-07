@@ -2,12 +2,13 @@
 # For license information, please see license.txt
 
 import frappe
-from frappe.model.document import Document
+from frappe.website.website_generator import WebsiteGenerator
 
 from frappe.website.utils import clear_website_cache,delete_page_cache
 
 
-class ioiSiteNews(Document):
+class ioiSiteNews(WebsiteGenerator):
+	DocType = "ioi Site News"
 	def validate(self):
 		
 		if not self.freeze_portal_result:
@@ -21,7 +22,7 @@ class ioiSiteNews(Document):
 			</div>
 			<h2>{self.title}</h2>
 			<p>{self.description}</p>
-			<a href="/fr/news1?news={self.name}" class="classic-link">Voir la news</a>
+			<a href="/fr/news1/{self.name}" class="classic-link">Voir la news</a>
 		</div>
 	</div>
 </div>"""
@@ -56,10 +57,16 @@ class ioiSiteNews(Document):
 			
 			self.single_result=singleHtml
 
-			if self.portal_result or self.single_result:
+		if self.portal_result or self.single_result:
 
-				delete_page_cache("/fr/news")
-				delete_page_cache("/fr/news1")
+			delete_page_cache("/fr/news")
+
+		if not self.route:
+			self.route=f"{self.language.lower()}/news1/{self.name}"
+
+		if not "news1" in self.route:
+			self.route=f"{self.language.lower()}/news1/{self.name}"
+
 
 @frappe.whitelist()
 def ioi_clear_website_cache():

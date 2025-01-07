@@ -1,0 +1,104 @@
+{% extends "templates/web.html" %}
+
+<!doctype html>
+<html class="no-js preload">
+
+{% block meta_block %}
+<meta name="language" value="fr" />
+{% endblock %}
+
+{% block head %}
+
+{{frappe.db.get_value("Web Template","Head","template")}}
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Links-->
+<link rel="stylesheet" href="/files/web_template/2024/12/home_fr/css.css">
+<script type="module" crossorigin src="/files/web_template/2024/12/home_fr/app.js"></script>
+
+
+<script>(function () { var c = document.documentElement.classList, ua = navigator.userAgent; c.remove('no-js'); c.toggle('ie', (ua.indexOf('MSIE ') > -1 || ua.indexOf('Trident/') > -1)); }());</script>
+<script>(function () { document.documentElement.style.setProperty('--rawVph', window.innerHeight); })()</script>
+<script type="module" crossorigin src="/files/app.8687006f.js"></script>
+<link rel="stylesheet" href="/files/app.54b7b081.css">
+{%endblock%}
+
+{% block page_content %}
+
+<body data-v="about">
+
+	{% set args = {"current_page" : 0, "relative_page_link" : "news1", "home" : 0} %}
+  	{%if language == "En"%}
+
+		{% set test = frappe.db.get_value("Web Template","Header ioi en","template") %}
+		
+	
+		{{frappe.render_template(test,args)}}
+
+		<div class="router">
+			<div class="view view--about">
+	
+			<main>
+				<button id="scrollToTop" class="scroll-to-top" aria-label="Back to top">▲</button>
+				{{single_result}}
+			</main>
+			{{frappe.db.get_value("Web Template","Footer ioi en","template")}}
+			</div>
+		</div>
+
+	{%endif%}
+	{%if language == "Fr"%}
+
+		{% set test = frappe.db.get_value("Web Template","Header ioi fr","template") %}
+		
+	
+		{{frappe.render_template(test,args)}}
+
+		<div class="router">
+			<div class="view view--about">
+	
+			<main>
+				<button id="scrollToTop" class="scroll-to-top" aria-label="Back to top">▲</button>
+				{{single_result}}
+			</main>
+			{{frappe.db.get_value("Web Template","Footer ioi fr","template")}}
+			</div>
+		</div>
+		
+	{%endif%}
+	{%if language == "Nl"%}
+
+		{% set test = frappe.db.get_value("Web Template","Header ioi nl","template") %}
+		
+	
+		{{frappe.render_template(test,args)}}
+
+		<div class="router">
+			<div class="view view--about">
+	
+			<main>
+				<button id="scrollToTop" class="scroll-to-top" aria-label="Back to top">▲</button>
+				{{single_result}}
+			</main>
+			{{frappe.db.get_value("Web Template","Footer ioi nl","template")}}
+			</div>
+		</div>
+		
+	{%endif%}
+  
+
+  <div id="grid-ctn" class="ctn">
+    <div id="grid" class="row | pr">
+      <div class="gridSizer | colSizer | col-1 | t-col-1 | m-col-1"></div>
+      <div class="gridSizer | gutSizer"></div>
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.polyfill.io/v3/polyfill.min.js?features=default,es6,fetch,Object.entries,Object.values,IntersectionObserver,Array.from&flags=gated"></script>
+</body>
+{%endblock%}
+
+</html>

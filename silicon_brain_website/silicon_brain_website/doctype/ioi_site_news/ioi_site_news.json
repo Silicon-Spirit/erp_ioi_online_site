@@ -11,10 +11,11 @@
   "column_break_jcvs",
   "image",
   "section_break_kmvv",
-  "language",
+  "subject",
+  "route",
   "title",
   "column_break_orwo",
-  "subject",
+  "language",
   "image_shown",
   "section_break_nxvu",
   "description",
@@ -72,7 +73,9 @@
   {
    "fieldname": "subject",
    "fieldtype": "Data",
-   "label": "Subject"
+   "in_list_view": 1,
+   "label": "Subject",
+   "reqd": 1
   },
   {
    "fieldname": "portal_result",
@@ -125,11 +128,18 @@
    "fieldtype": "Check",
    "hidden": 1,
    "label": "Enabled"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "enabled",
  "links": [],
- "modified": "2025-01-07 14:03:51.706789",
+ "modified": "2025-01-07 15:01:36.735987",
  "modified_by": "Administrator",
  "module": "Silicon Brain Website",
  "name": "ioi Site News",
@@ -149,7 +159,9 @@
    "write": 1
   }
  ],
+ "route": "news1",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "website_search_field": "subject"
 }

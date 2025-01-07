@@ -57,6 +57,7 @@ website_redirects = [
 {"source": "/home", "target": "/fr"},
 {"source": "/privacy", "target": "/fr/privacy"},
 {"source": "/news", "target": "/fr/news"},
+{"source": "/news1", "target": "/fr/news"},
 {"source": "/silicon_ioi", "target": "/fr/silicon_ioi"},
 {"source": "/silicon-ioi", "target": "/fr/silicon_ioi"},
 {"source": "/en/documentation", "target": "/en/contact"},
