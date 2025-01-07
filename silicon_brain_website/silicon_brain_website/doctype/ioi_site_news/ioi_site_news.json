@@ -7,9 +7,11 @@
  "engine": "InnoDB",
  "field_order": [
   "date",
+  "enabled",
   "column_break_jcvs",
   "image",
   "section_break_kmvv",
+  "language",
   "title",
   "column_break_orwo",
   "subject",
@@ -109,11 +111,24 @@
    "fieldname": "freeze_single_result",
    "fieldtype": "Check",
    "label": "Freeze Single Result"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Select",
+   "label": "Language",
+   "options": "En\nFr\nNl"
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Enabled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-20 13:59:47.501704",
+ "modified": "2025-01-07 13:46:06.994458",
  "modified_by": "Administrator",
  "module": "Silicon Brain Website",
  "name": "ioi Site News",
