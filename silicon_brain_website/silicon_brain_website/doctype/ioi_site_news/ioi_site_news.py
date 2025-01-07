@@ -22,7 +22,7 @@ class ioiSiteNews(WebsiteGenerator):
 			</div>
 			<h2>{self.title}</h2>
 			<p>{self.description}</p>
-			<a href="/fr/news1/{self.name}" class="classic-link">Voir la news</a>
+			<a href="/{self.language}/news1/{self.name}" class="classic-link">Voir la news</a>
 		</div>
 	</div>
 </div>"""
