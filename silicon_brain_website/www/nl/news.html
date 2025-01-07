@@ -103,7 +103,7 @@
   <div class="router">
       <div class="view view--about">
 
-          {{frappe.db.get_value("Web Template","News nl","template")}}
+        {{frappe.render_template(frappe.db.get_value("Web Template","News nl","template"))}}
 
 
 
