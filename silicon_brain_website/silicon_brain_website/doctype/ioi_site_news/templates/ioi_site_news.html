@@ -30,7 +30,7 @@
 <body data-v="about">
 
 	{% set args = {"current_page" : 0, "relative_page_link" : "news1", "home" : 0} %}
-  	{%if language == "En"%}
+  	{%if language == "en"%}
 
 		{% set test = frappe.db.get_value("Web Template","Header ioi en","template") %}
 		
@@ -49,7 +49,7 @@
 		</div>
 
 	{%endif%}
-	{%if language == "Fr"%}
+	{%if language == "fr"%}
 
 		{% set test = frappe.db.get_value("Web Template","Header ioi fr","template") %}
 		
@@ -68,7 +68,7 @@
 		</div>
 		
 	{%endif%}
-	{%if language == "Nl"%}
+	{%if language == "nl"%}
 
 		{% set test = frappe.db.get_value("Web Template","Header ioi nl","template") %}
 		

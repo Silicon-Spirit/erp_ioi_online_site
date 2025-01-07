@@ -62,10 +62,10 @@ class ioiSiteNews(WebsiteGenerator):
 			delete_page_cache("/fr/news")
 
 		if not self.route:
-			self.route=f"{self.language.lower()}/news1/{self.name}"
+			self.route=f"{self.language}/news1/{self.name}"
 
 		if not "news1" in self.route:
-			self.route=f"{self.language.lower()}/news1/{self.name}"
+			self.route=f"{self.language}/news1/{self.name}"
 
 
 @frappe.whitelist()
