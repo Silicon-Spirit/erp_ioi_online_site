@@ -113,6 +113,7 @@
    "label": "Freeze Single Result"
   },
   {
+   "default": "Fr",
    "fieldname": "language",
    "fieldtype": "Select",
    "label": "Language",
@@ -128,7 +129,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-07 13:46:06.994458",
+ "modified": "2025-01-07 14:03:51.706789",
  "modified_by": "Administrator",
  "module": "Silicon Brain Website",
  "name": "ioi Site News",
