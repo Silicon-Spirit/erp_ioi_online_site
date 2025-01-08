@@ -54,7 +54,7 @@ website_redirects = [
 {"source": "/contact", "target": "/fr/contact"},
 {"source": "/about", "target": "/fr/about"},
 {"source": "/experts", "target": "/fr/experts"},
-{"source": "/home", "target": "/fr"},
+{"source": "/", "target": "/fr"},
 {"source": "/privacy", "target": "/fr/privacy"},
 {"source": "/news", "target": "/fr/news"},
 {"source": "/news1", "target": "/fr/news"},

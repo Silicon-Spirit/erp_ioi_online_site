@@ -62,7 +62,8 @@ class ioiSiteNews(WebsiteGenerator):
 
 		if self.portal_result or self.single_result:
 
-			delete_page_cache("/fr/news")
+			delete_page_cache(f"/{self.language}/news")
+			delete_page_cache(f"/{self.language}")
 
 		if not self.route:
 			self.route=f"{self.language}/news1/{self.name}"
