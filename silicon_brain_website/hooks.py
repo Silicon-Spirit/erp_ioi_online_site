@@ -78,6 +78,9 @@ website_redirects = [
 {"source": "/en/new-generation", "target": "/en/new_generation"},
 {"source": "/fr/new-generation", "target": "/fr/new_generation"},
 {"source": "/nl/new-generation", "target": "/nl/new_generation"},
+{"source": "/en/park-manager", "target": "/en/park_manager"},
+{"source": "/fr/park-manager", "target": "/fr/park_manager"},
+{"source": "/nl/park-manager", "target": "/nl/park_manager"},
 ]
 
 # Generators
