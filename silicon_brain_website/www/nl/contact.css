@@ -10,6 +10,13 @@
     height: 1.8rem;
 }
 
+.iframe-form{
+    height: 600px;
+     width: 100%;
+     padding: 25px;
+     background-color: white;
+ }
+
 .navbar {
     display: none;
     }
@@ -297,5 +304,12 @@
         margin-left: 100px;
         margin-right: 90px;
     }
+    }
+
+    @media (min-width: 1200px){
+
+        .iframe-form{
+            height: 100%;
+        }
     }
       
