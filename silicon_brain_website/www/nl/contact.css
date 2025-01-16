@@ -305,11 +305,3 @@
         margin-right: 90px;
     }
     }
-
-    @media (min-width: 1200px){
-
-        .iframe-form{
-            height: 100%;
-        }
-    }
-      
