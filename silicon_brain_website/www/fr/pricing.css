@@ -412,6 +412,10 @@
     overflow-x: scroll;
     overflow-y: auto;
   }
+  .large-table-fake-top-scroll-container-3 div {
+    font-size: 1px;
+    line-height: 1px;
+  }
   @media only screen and (max-width: 1440px) {
     .max-only {
       display: none;
