@@ -61,4 +61,9 @@ var reveal_tooltip = function () {
 	  document.getElementById("hide-categories").style.display = "block";
 	});
   }
+
+  const strikeds= document.getElementsByClassName("striked_price")
   
+  for (const striked of strikeds) {
+	striked.href="#strike_cd";
+  }
