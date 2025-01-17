@@ -65,8 +65,7 @@ var reveal_tooltip = function () {
 var wrapper1 = document.getElementById('large-table-fake-top-scroll-container-3');
 var wrapper1div = document.querySelector('#large-table-fake-top-scroll-container-3 div');
 var wrapper2 = document.getElementById('main_content');
-var wrapper2tr = document.getElementById('main_tr');
-wrapper1div.style.width=wrapper2tr.offsetWidth+"px"
+wrapper1div.style.width=wrapper2.scrollWidth+"px"
 wrapper1.onscroll = function() {
   wrapper2.scrollLeft = wrapper1.scrollLeft;
 };
