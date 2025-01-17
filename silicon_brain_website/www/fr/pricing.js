@@ -61,3 +61,12 @@ var reveal_tooltip = function () {
 	  document.getElementById("hide-categories").style.display = "block";
 	});
   }
+
+var wrapper1 = document.getElementById('large-table-fake-top-scroll-container-3');
+var wrapper2 = document.getElementById('main_content');
+wrapper1.onscroll = function() {
+  wrapper2.scrollLeft = wrapper1.scrollLeft;
+};
+wrapper2.onscroll = function() {
+  wrapper1.scrollLeft = wrapper2.scrollLeft;
+};
