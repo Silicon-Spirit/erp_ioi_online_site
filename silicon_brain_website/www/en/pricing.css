@@ -259,7 +259,7 @@
   }
   
   .price {
-    color: #5a14e6;
+    color: indianred;
     font-weight: bold;
     font-size: 25px;
     text-align: left;
@@ -379,9 +379,8 @@
   
   .striked_price {
     font-size: 17px;
-    color: indianred;
-    text-decoration:red line-through;
-    text-decoration: none;
+    color: #5a14e6;
+    text-decoration:#5a14e6 line-through;
     margin-left: 14px;
   }
   
