@@ -446,6 +446,7 @@
    }
   
   #main_content{
+    top:unset;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
