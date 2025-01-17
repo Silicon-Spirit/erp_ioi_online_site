@@ -403,8 +403,18 @@
   }
   
   #main_content {
-    top: 18rem;
+    top: 9rem;
     overflow-x:scroll;
+  }
+
+  #large-table-fake-top-scroll-container-3 {
+    max-width: 100vw;
+    overflow-x: scroll;
+    overflow-y: auto;
+  }
+  .large-table-fake-top-scroll-container-3 div {
+    font-size: 1px;
+    line-height: 1px;
   }
   @media only screen and (max-width: 1440px) {
     .max-only {
@@ -450,6 +460,10 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+  }
+
+  #large-table-fake-top-scroll-container-3 {
+    display: none;
   }
   
   .flex-extreme {
