@@ -410,6 +410,9 @@
     max-width: 100vw;
     overflow-x: scroll;
     overflow-y: auto;
+    z-index: 4;
+    margin-top: 6rem;
+    position: relative;
   }
   .large-table-fake-top-scroll-container-3 div {
     font-size: 1px;
