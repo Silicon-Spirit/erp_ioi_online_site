@@ -87,6 +87,9 @@ website_redirects = [
 {"source": "/en/park-manager", "target": "/en/park_manager"},
 {"source": "/fr/park-manager", "target": "/fr/park_manager"},
 {"source": "/nl/park-manager", "target": "/nl/park_manager"},
+{"source": "/en/pack-accounting", "target": "/en/pack_accounting"},
+{"source": "/fr/pack-accounting", "target": "/fr/pack_accounting"},
+{"source": "/nl/pack-accounting", "target": "/nl/pack_accounting"},
 ]
 
 # Generators
