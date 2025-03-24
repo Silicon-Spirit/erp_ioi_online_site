@@ -4,7 +4,7 @@
 <html class="no-js preload">
 
 {% block meta_block %}
-<meta name="language" value="fr" />
+<meta name="language" value="{{language}}" />
 {% endblock %}
 
 {% block head %}
@@ -15,27 +15,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <!-- Links-->
-<link rel="stylesheet" href="/files/web_template/2024/12/home_fr/css.css">
-<script type="module" crossorigin src="/files/web_template/2024/12/home_fr/app.js"></script>
-
-
 <script>(function () { var c = document.documentElement.classList, ua = navigator.userAgent; c.remove('no-js'); c.toggle('ie', (ua.indexOf('MSIE ') > -1 || ua.indexOf('Trident/') > -1)); }());</script>
 <script>(function () { document.documentElement.style.setProperty('--rawVph', window.innerHeight); })()</script>
 <script type="module" crossorigin src="/files/app.8687006f.js"></script>
-<link rel="stylesheet" href="/files/app.54b7b081.css">
+<script type="module" crossorigin src="/files/website_settings/website_settings/app-custom.js"></script>
+
+<link rel="stylesheet" href="/files/website_settings/website_settings/app.54b7b081.css">
 {%endblock%}
 
 {% block page_content %}
 
 <body data-v="about">
 
-	{% set args = {"current_page" : 0, "relative_page_link" : "news1", "home" : 0} %}
+	{% set args = {"current_page" : 0, "relative_page_link" : "news1", "home" : 0,"language":language} %}
   	{%if language == "en"%}
 
-		{% set test = frappe.db.get_value("Web Template","Header ioi en","template") %}
-		
-	
-		{{frappe.render_template(test,args)}}
+		{{frappe.render_template(frappe.db.get_value("Web Template","Header Adaptative","template"),args)}}
 
 		<div class="router">
 			<div class="view view--about">
@@ -44,48 +39,10 @@
 				<button id="scrollToTop" class="scroll-to-top" aria-label="Back to top">▲</button>
 				{{single_result}}
 			</main>
-			{{frappe.db.get_value("Web Template","Footer ioi en","template")}}
+			{{frappe.render_template(frappe.db.get_value("Web Template","Footer Global","template"),{"language":language})}}
 			</div>
 		</div>
 
-	{%endif%}
-	{%if language == "fr"%}
-
-		{% set test = frappe.db.get_value("Web Template","Header ioi fr","template") %}
-		
-	
-		{{frappe.render_template(test,args)}}
-
-		<div class="router">
-			<div class="view view--about">
-	
-			<main>
-				<button id="scrollToTop" class="scroll-to-top" aria-label="Back to top">▲</button>
-				{{single_result}}
-			</main>
-			{{frappe.db.get_value("Web Template","Footer ioi fr","template")}}
-			</div>
-		</div>
-		
-	{%endif%}
-	{%if language == "nl"%}
-
-		{% set test = frappe.db.get_value("Web Template","Header ioi nl","template") %}
-		
-	
-		{{frappe.render_template(test,args)}}
-
-		<div class="router">
-			<div class="view view--about">
-	
-			<main>
-				<button id="scrollToTop" class="scroll-to-top" aria-label="Back to top">▲</button>
-				{{single_result}}
-			</main>
-			{{frappe.db.get_value("Web Template","Footer ioi nl","template")}}
-			</div>
-		</div>
-		
 	{%endif%}
   
 
