@@ -30,7 +30,7 @@
 
 <body data-v="about">
 
-	{% set args = {"current_page" : 0, "relative_page_link" : "news1", "home" : 0,"language":language} %}
+	{% set args = {"current_page" : 0, "relative_page_link" : "news", "home" : 0,"language":language} %}
   	{%if language == "en"%}
 
 		{{frappe.render_template(frappe.db.get_value("Web Template","Header Adaptative","template"),args)}}
