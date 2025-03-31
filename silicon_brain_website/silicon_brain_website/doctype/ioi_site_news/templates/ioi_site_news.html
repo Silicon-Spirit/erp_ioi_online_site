@@ -1,5 +1,9 @@
 {% extends "templates/web.html" %}
 
+---
+no_cache=1
+---
+
 <!doctype html>
 <html class="no-js preload">
 
@@ -31,23 +35,19 @@
 <body data-v="about">
 
 	{% set args = {"current_page" : 0, "relative_page_link" : "news", "home" : "0","language":language} %}
-  	{%if language == "en"%}
 
-		{{frappe.render_template(frappe.db.get_value("Web Template","Header Adaptative","template"),args)}}
+	{{frappe.render_template(frappe.db.get_value("Web Template","Header Adaptative","template"),args)}}
 
-		<div class="router">
-			<div class="view view--about">
-	
-			<main>
-				<button id="scrollToTop" class="scroll-to-top" aria-label="Back to top">▲</button>
-				{{single_result}}
-			</main>
-			{{frappe.render_template(frappe.db.get_value("Web Template","Footer Global","template"),{"language":language})}}
-			</div>
+	<div class="router">
+		<div class="view view--about">
+
+		<main>
+			<button id="scrollToTop" class="scroll-to-top" aria-label="Back to top">▲</button>
+			{{single_result}}
+		</main>
+		{{frappe.render_template(frappe.db.get_value("Web Template","Footer Global","template"),{"language":language})}}
 		</div>
-
-	{%endif%}
-  
+	</div>
 
   <div id="grid-ctn" class="ctn">
     <div id="grid" class="row | pr">
