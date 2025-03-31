@@ -49,9 +49,6 @@ home_page = "fr"
 # ----------
 website_redirects = [
 {"source": "/contact", "target": "/fr/contact"},
-{"source": "/fr/universe", "target": "/fr/contact"},
-{"source": "/en/universe", "target": "/en/contact"},
-{"source": "/nl/universe", "target": "/nl/contact"},
 {"source": "/about", "target": "/fr/about-us"},
 {"source": "/experts", "target": "/fr/experts"},
 {"source": "/", "target": "/fr"},
