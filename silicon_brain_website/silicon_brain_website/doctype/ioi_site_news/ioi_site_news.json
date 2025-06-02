@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2024-12-20 11:09:19.489005",
@@ -138,7 +139,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "enabled",
  "links": [],
- "modified": "2025-01-07 15:31:17.944914",
+ "modified": "2025-06-02 18:47:06.218137",
  "modified_by": "Administrator",
  "module": "Silicon Brain Website",
  "name": "ioi Site News",
@@ -159,6 +160,7 @@
   }
  ],
  "route": "news1",
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
