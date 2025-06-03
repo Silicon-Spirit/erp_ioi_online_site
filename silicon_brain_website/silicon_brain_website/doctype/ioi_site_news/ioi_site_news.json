@@ -132,6 +132,8 @@
   {
    "fieldname": "route",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Route"
   }
  ],
@@ -139,7 +141,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "enabled",
  "links": [],
- "modified": "2025-06-03 10:19:09.365593",
+ "modified": "2025-06-03 10:34:29.593789",
  "modified_by": "Administrator",
  "module": "Silicon Brain Website",
  "name": "ioi Site News",
