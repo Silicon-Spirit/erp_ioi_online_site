@@ -48,14 +48,14 @@ home_page = "fr"
 #Website Redirects
 # ----------
 website_redirects = [
-{"source": "/contact", "target": "/fr/contact"},
-{"source": "/about", "target": "/fr/about-us"},
-{"source": "/experts", "target": "/fr/experts"},
-{"source": "/", "target": "/fr"},
-{"source": "/privacy", "target": "/fr/privacy"},
-{"source": "/news", "target": "/fr/news"},
-{"source": "/silicon_ioi", "target": "/fr/silicon-ioi"},
-{"source": "/silicon-ioi", "target": "/fr/silicon-ioi"},
+{"source": "/contact", "target": "/en/contact"},
+{"source": "/about", "target": "/en/about-us"},
+{"source": "/experts", "target": "/en/experts"},
+{"source": "/", "target": "/en"},
+{"source": "/privacy", "target": "/en/privacy"},
+{"source": "/news", "target": "/en/news"},
+{"source": "/silicon_ioi", "target": "/en/silicon-ioi"},
+{"source": "/silicon-ioi", "target": "/en/silicon-ioi"},
 {"source": "/en/documentation", "target": "/en/contact"},
 {"source": "/fr/documentation", "target": "/fr/contact"},
 {"source": "/nl/documentation", "target": "/nl/contact"},
