@@ -139,7 +139,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "enabled",
  "links": [],
- "modified": "2025-06-03 10:03:48.747298",
+ "modified": "2025-06-03 10:19:09.365593",
  "modified_by": "Administrator",
  "module": "Silicon Brain Website",
  "name": "ioi Site News",
@@ -168,7 +168,7 @@
    "share": 1
   }
  ],
- "route": "news1",
+ "route": "news",
  "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",

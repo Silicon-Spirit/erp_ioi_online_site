@@ -12,6 +12,11 @@ from frappe.website.utils import clear_website_cache,delete_page_cache
 class ioiSiteNews(WebsiteGenerator):
 	DocType = "ioi Site News"
 	def validate(self):
+
+		self.route=f"{self.language}/news/{slugify(self.name)}"
+
+		if not "news" in self.route or not self.language+"/" in self.route:
+			self.route=f"{self.language}/news/{slugify(self.name)}"
 		
 		if not self.freeze_portal_result:
 			newsHtml=f"""<div class="container-ms">
@@ -20,11 +25,11 @@ class ioiSiteNews(WebsiteGenerator):
 			<div class="img-n" style="background-image: url('{self.image}');"></div>
 			<div class="info-n">
 				<span>{self.date}</span>
-				<span>{self.subject}</span>
+				<span>{self.subject or ""}</span>
 			</div>
 			<h2>{self.title}</h2>
 			<p>{self.description}</p>
-			<a href="/{self.language}/news1/{self.name}" class="classic-link">{_("See the news",self.language)}</a>
+			<a href="/{self.language}/news/{slugify(self.name)}" class="classic-link">{_("See the news",self.language)}</a>
 		</div>
 	</div>
 </div>"""
@@ -65,13 +70,25 @@ class ioiSiteNews(WebsiteGenerator):
 			delete_page_cache(f"/{self.language}/news")
 			delete_page_cache(f"/{self.language}")
 
-		if not self.route:
-			self.route=f"{self.language}/news1/{self.name}"
-
-		if not "news1" in self.route or not self.language+"/" in self.route:
-			self.route=f"{self.language}/news1/{self.name}"
 
 
 @frappe.whitelist()
 def ioi_clear_website_cache():
 	clear_website_cache()
+
+
+def slugify(text):
+	import unicodedata
+	import re
+	# Normalize and remove accents
+	text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('ascii')
+	# Lowercase
+	text = text.lower()
+	# Replace non-word characters with hyphens
+	text = re.sub(r'[\s]+', '-', text)  # Replace spaces with hyphen
+	text = re.sub(r'[^a-z0-9\-]', '', text)  # Remove anything that's not alphanumeric or hyphen
+	# Remove multiple hyphens
+	text = re.sub(r'-{2,}', '-', text)
+	# Strip hyphens from start/end
+	text = text.strip('-')
+	return text
