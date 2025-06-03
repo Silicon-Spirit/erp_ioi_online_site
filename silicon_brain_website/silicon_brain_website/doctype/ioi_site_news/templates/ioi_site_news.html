@@ -13,8 +13,6 @@ no_cache=1
 
 {% block head %}
 
-{{frappe.db.get_value("Web Template","Head","template")}}
-
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -35,8 +33,6 @@ no_cache=1
 <body data-v="about">
 
 	{% set args = {"current_page" : 0, "relative_page_link" : "news", "home" : "0","language":language} %}
-
-	{{frappe.render_template(frappe.db.get_value("Web Template","Header Adaptative","template"),args)}}
 
 	<div class="router">
 		<div class="view view--about">
