@@ -53,7 +53,7 @@ class ioiSiteNews(WebsiteGenerator):
 	</section>
 	<section class="main-content">
 		<div class="container-ms">
-			<a href="""+news_path+f""" class="single-btn">{_("See all news",self.language)}</a>
+			<a href=/"""+news_path+f""" class="single-btn">{_("See all news",self.language)}</a>
 
 			<div class="content-single-col">
 				{self.content}
