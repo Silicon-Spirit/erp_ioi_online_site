@@ -22,16 +22,17 @@ class ioiSiteNews(WebsiteGenerator):
 			newsHtml=f"""<div class="container-ms">
 	<div class="content-news">
 		<div class="item-n">
-			<div class="img-n"><img src="{self.image}" alt="" width="365" height="205"></div>
-			<div class="info-n">
-				<span>{self.date}</span>
-				<span>{self.subject or ""}</span>
-			</div>
-			<h2>{self.title}</h2>
-			<p>{self.description}</p>
-			<a href="/{self.language}/news/{slugify(self.name)}" class="classic-link">{_("See the news",self.language)}</a>
-			</div>
+		<a href="/{self.language}/news/{slugify(self.name)}" class="img-n"><img src="{self.image}" alt="" width="365" height="205">
+		</a>
+		<div class="info-n">
+			<span>{self.date}</span>
+			<span>{self.subject or ""}</span>
 		</div>
+		<h2>{self.title}</h2>
+		<p>{self.description}</p>
+		<a href="{self.language}/news/{slugify(self.name)}" class="classic-link">{_("See the news",self.language)}</a>
+		</div>
+	</div>
 </div>"""
 			self.portal_result=newsHtml
 
