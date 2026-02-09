@@ -16,12 +16,6 @@ class ioiSiteNews(WebsiteGenerator):
 		if self.common_id:
 			if frappe.db.exists("ioi Site News",{"language":self.language,"common_id":self.common_id,"name":("!=",self.name)}):
 				frappe.throw(_("A ioi Site News with the same common id already exists in this language."))
-
-			meta = frappe.get_meta("Web Page")
-
-			if meta.has_field("custom_common_id"): # returns True or False.
-				if frappe.db.exists("Web Page",{"custom_common_id":self.common_id,"route":("like",f"{self.language}/%")}):
-					frappe.throw(_("A Web Page with the same  common id already exists in this language."))
 			
 
 		self.route=f"{self.language}/news/{slugify(self.name)}"
@@ -86,8 +80,6 @@ class ioiSiteNews(WebsiteGenerator):
 def web_page_validate(doc, method=None):
 	if hasattr(doc, 'custom_common_id') and doc.custom_common_id:
 		language=doc.route.split("/")[0]
-		if frappe.db.exists("ioi Site News",{"language":language,"common_id":doc.custom_common_id}):
-			frappe.throw(_("A ioi Site News with the same common id already exists in this language."))
 
 		if frappe.db.exists("Web Page",{"custom_common_id":doc.custom_common_id,"name":("!=",doc.name),"route":("like",f"{language}/%")}):
 			frappe.throw(_("A Web Page with the same common id already exists in this language."))
