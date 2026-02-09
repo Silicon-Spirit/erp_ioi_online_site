@@ -124,13 +124,11 @@ website_redirects = [
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+    "Web Page": {
+        "validate": "silicon_brain_website.silicon_brain_website.doctype.ioi_site_news.ioi_site_news.web_page_validate"
+    }
+}
 
 # Scheduled Tasks
 # ---------------
@@ -169,7 +167,7 @@ website_redirects = [
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 # override_doctype_dashboards = {
-#	"Task": "silicon_brain_website.task.get_dashboard_data"
+#	"Task": "silicon_brain_website.task.get_dashboard_data" 
 # }
 
 # exempt linked doctypes from being automatically cancelled

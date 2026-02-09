@@ -13,6 +13,17 @@ class ioiSiteNews(WebsiteGenerator):
 	DocType = "ioi Site News"
 	def validate(self):
 
+		if self.common_id:
+			if frappe.db.exists("ioi Site News",{"language":self.language,"common_id":self.common_id,"name":("!=",self.name)}):
+				frappe.throw(_("A ioi Site News with the same common id already exists in this language."))
+
+			meta = frappe.get_meta("Web Page")
+
+			if meta.has_field("custom_common_id"): # returns True or False.
+				if frappe.db.exists("Web Page",{"custom_common_id":self.common_id,"route":("like",f"{self.language}/%")}):
+					frappe.throw(_("A Web Page with the same  common id already exists in this language."))
+			
+
 		self.route=f"{self.language}/news/{slugify(self.name)}"
 
 		if not "news" in self.route or not self.language+"/" in self.route:
@@ -71,6 +82,32 @@ class ioiSiteNews(WebsiteGenerator):
 			delete_page_cache(f"/{self.language}/news")
 			delete_page_cache(f"/{self.language}")
 
+
+def web_page_validate(doc, method=None):
+	if hasattr(doc, 'custom_common_id') and doc.custom_common_id:
+		language=doc.route.split("/")[0]
+		if frappe.db.exists("ioi Site News",{"language":language,"common_id":doc.custom_common_id}):
+			frappe.throw(_("A ioi Site News with the same common id already exists in this language."))
+
+		if frappe.db.exists("Web Page",{"custom_common_id":doc.custom_common_id,"name":("!=",doc.name),"route":("like",f"{language}/%")}):
+			frappe.throw(_("A Web Page with the same common id already exists in this language."))
+
+
+@frappe.whitelist(allow_guest=True)
+def get_other_pages(route):
+	if "/" in route:
+		web_page = frappe.db.exists("Web Page",{"route":route})
+		if web_page:
+			meta = frappe.get_meta("Web Page")
+			if meta.has_field("custom_common_id"): # returns True or False.
+				custom_common_id=frappe.db.get_value("Web Page",web_page,"custom_common_id")
+				return frappe.get_all("Web Page",filters={"custom_common_id":custom_common_id,"name":("!=",web_page)},pluck="route")
+		else:
+			site_news=frappe.db.exists("ioi Site News",{"route":route})
+			if site_news:
+				common_id=frappe.db.get_value("ioi Site News",site_news,"common_id")
+				return frappe.get_all("ioi Site News",filters={"common_id":common_id,"name":("!=",site_news)},pluck="route")
+		return []
 
 
 @frappe.whitelist()
