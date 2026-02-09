@@ -103,6 +103,10 @@ def get_other_pages(route):
 			return frappe.get_all("ioi Site News",filters={"common_id":common_id,"name":("!=",site_news)},pluck="route")+frappe.get_all("Web Page",filters={"custom_common_id":common_id},pluck="route")
 		return []
 
+def get_context(context):
+	# This pulls in head_html, footer_html, etc.
+	from frappe.website.doctype.website_settings.website_settings import get_website_settings
+	context.update(get_website_settings())
 
 @frappe.whitelist()
 def ioi_clear_website_cache():
