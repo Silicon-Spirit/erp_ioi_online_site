@@ -91,14 +91,16 @@ def get_other_pages(route):
 		web_page = frappe.db.exists("Web Page",{"route":route})
 		if web_page:
 			meta = frappe.get_meta("Web Page")
-			if meta.has_field("custom_common_id"): # returns True or False.
-				custom_common_id=frappe.db.get_value("Web Page",web_page,"custom_common_id")
-				return frappe.get_all("Web Page",filters={"custom_common_id":custom_common_id,"name":("!=",web_page)},pluck="route")
-		else:
-			site_news=frappe.db.exists("ioi Site News",{"route":route})
-			if site_news:
-				common_id=frappe.db.get_value("ioi Site News",site_news,"common_id")
-				return frappe.get_all("ioi Site News",filters={"common_id":common_id,"name":("!=",site_news)},pluck="route")
+			if meta.has_field("custom_common_id"):
+				common_id=frappe.db.get_value("Web Page",web_page,"custom_common_id")
+		site_news=frappe.db.exists("ioi Site News",{"route":route})
+		if site_news:
+			common_id=frappe.db.get_value("ioi Site News",site_news,"common_id")
+			
+		if web_page:
+			return frappe.get_all("Web Page",filters={"custom_common_id":common_id,"name":("!=",web_page)},pluck="route")+frappe.get_all("ioi Site News",filters={"common_id":common_id},pluck="route")
+		if site_news:
+			return frappe.get_all("ioi Site News",filters={"common_id":common_id,"name":("!=",site_news)},pluck="route")+frappe.get_all("Web Page",filters={"custom_common_id":common_id},pluck="route")
 		return []
 
 
