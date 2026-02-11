@@ -7,3 +7,13 @@ def inject_navbar_data(context):
 		
 		# On injecte le résultat dans le contexte global
 		context.relative_page_links = get_other_pages(context.route)
+		context.language=context.route[:2]
+		if ("/" in context.route):
+			context.home=0
+		else:
+			context.home=1
+	
+	if context.get("custom_current_page_context"):
+		context.current_page=context.custom_current_page_context
+	else:
+		context.current_page=0
