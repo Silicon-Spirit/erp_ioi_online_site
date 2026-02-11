@@ -67,6 +67,8 @@ website_redirects = [
 {"source": "/nl/about", "target": "/nl/about-us"},  
 ]
 
+update_website_context="silicon_brain_website.utils.inject_navbar_data"
+
 # Generators
 # ----------
 
