@@ -22,7 +22,7 @@ no_cache=1
 
 {% block page_content %}
 
-<body data-v="about">
+<div data-v="about">
 
 	{% set args = {"current_page" : 0, "relative_page_link" : "news", "home" : "0","language":language} %}
 
@@ -45,7 +45,7 @@ no_cache=1
 
   <script
     src="https://cdn.polyfill.io/v3/polyfill.min.js?features=default,es6,fetch,Object.entries,Object.values,IntersectionObserver,Array.from&flags=gated"></script>
-</body>
+</div>
 {%endblock%}
 
 </html>
