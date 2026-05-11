@@ -9,6 +9,8 @@ def inject_navbar_data(context):
 		context.relative_page_links = get_other_pages(context.route)
 		context.language=context.route[:2]
 		context.body_class=f"lang-{context.language}"
+		if context.get("boot"):
+			context.boot["lang"]=context.language
 		if ("/" in context.route):
 			context.home=0
 		else:
